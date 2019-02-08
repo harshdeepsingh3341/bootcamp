@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Visibility and Display difference.</title>
+        <link type="text/css" href="index.css" rel="stylesheet">
+    </head>
+    <body>
+        <section>
+            <table>
+                <tr>
+                    <td>
+                        <button onclick="for(var i in document.getElementsByClassName('myvisibility')){document.getElementsByClassName('myvisibility')[i].style.visibility = 'visible'}">Visibility Visibile</button>
+                    </td>
+                    <td>
+                        <button onclick="for(var i in document.getElementsByClassName('myvisibility')){document.getElementsByClassName('myvisibility')[i].style.visibility = 'hidden'}">Visibility hidden</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="for(var i in document.getElementsByClassName('mydisplay')){document.getElementsByClassName('mydisplay')[i].style.display = 'block'}">Display Block</button>
+                    </td>
+                    <td>
+                        <button onclick="for(var i in document.getElementsByClassName('mydisplay')){document.getElementsByClassName('mydisplay')[i].style.display = 'none'}">Display None</button>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <div class="myvisibility">Visibility visible</div>
+            <div class="mydisplay">Display block</div>
+            <div class="myvisibility">Visibility visible2</div>
+            <div class="mydisplay">Display block2</div>
+        </section>
+    </body>
+</html>
