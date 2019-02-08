@@ -1,7 +1,11 @@
 div  {
-    color: blue
+    color: blue;
+    border-style: solid;
+    margin-bottom: 20px;
 }
 
 span {
-    color: chartreuse
+    color: chartreuse;
+    border-style: double;
+    margin-right: 10px;
 }
