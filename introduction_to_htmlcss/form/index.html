@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <link rel="stylesheet" href="index.css" type="text/css">
+    </head>
+    <body>
+        <section class="col-12">
+            <header class="col-10">
+                <span>TO THE NEW</span> <ul><li><a href="#">Home</a></li><li><a href="#">Quick Help</a></li></ul>
+                <hr style="clear:both">
+            </header>
+
+            <section class="body col-8">
+
+                <div class="body-head">
+                    <h1>
+                        Bug Report  
+                    </h1>
+                </div>
+
+                <form>
+                <div class="body-content">
+                    <div class="form-group">
+                        <label for="title">Title*</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description*</label>
+                        <textarea type="textarea" id="description" name="description" rows="5"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="os">Operating System</label>
+                        <select id="title" name="title">
+                            <option selected default disabled value="-1">Select...</option>
+                            <option value="1">Windows XP</option>
+                            <option value="2">Windows 8.1</option>
+                            <option value="3">Windows 10</option>
+                            <option value="4">Ubuntu</option>
+                            <option value="5">Linux</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="product">Product*</label>
+                        <select id="product" name="product" required>
+                            <option selected default disabled value="-1">Select...</option>
+                            <option value="1">Formoid</option>
+                            <option value="2">Product</option>
+                            <option value="3">Another Product</option>
+                            <option value="4">Cafeteria Portal</option>
+                            <option value="5">Learning Portal</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="version">Version*</label>
+                        <input id="version" name="version" type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="license" style="display:block">License</label>
+                        <input id="license" name="license" type="radio" value="1" placeholder="sdf"> Free
+                        <input id="license" name="license" type="radio" value="2"> Business
+                    </div>
+                    <div class="form-group">
+                        <label for="severity">Severity</label>
+                        <select id="severity" name="severity">
+                            <option selected default disabled value="-1">Select...</option>
+                            <option value="1">Critical</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="attachment">Attachments</label>
+                        <input type="file" id="attachment" name="attachment">
+                    </div>
+                </div>
+                <div class="form-group submit-wrapper">
+                    <input type="submit" value="Send">
+                </div>
+            </form>
+            </section>
+        </section>
+    </body>
+</html>
