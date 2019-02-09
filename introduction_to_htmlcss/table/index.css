@@ -1,0 +1,39 @@
+body{
+    background-color: darkgrey;
+}
+
+body h1{
+    margin: auto;
+    background-color: darkkhaki;
+    text-align: center
+}
+
+body table{
+    width: 50%;
+    margin: 30px auto 10px auto;
+    border-collapse: collapse;
+    border: thin solid #fadac5;
+}
+
+body table tr{
+    text-align: left;
+}
+
+body table tr:nth-of-type(even){
+    color: black;
+    background-color: #fadac5;
+}
+body table tr:nth-of-type(odd){
+    color: white;
+    background-color: none;
+}
+
+body table tr:first-child{
+    background-color: #f7caad;
+}
+
+body table th{
+    color: black;
+    font-size: 20px;
+    border: none;
+}
