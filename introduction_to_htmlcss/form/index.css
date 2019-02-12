@@ -134,3 +134,16 @@ header a{
 .body .body-content .form-group label{
     font-size: 14px;
 }
+
+
+
+@media only screen and (max-width:1110px){
+    .col-10{
+        width:100%;
+        margin:auto;
+    }
+    .col-8{
+        width:100%;
+        margin:auto;
+    }
+}
