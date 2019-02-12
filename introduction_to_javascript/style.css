@@ -46,7 +46,7 @@
     cursor: pointer;
     font-size: 17px;
     padding: 10px 10px;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .col-12 .col-10 .navbar ul .custom-li button:hover{
@@ -69,10 +69,42 @@
 .col-12 .body{
     margin: 15px auto 8px auto;
 }
-.col-12 .col-10 .si{
-    /* display: none; */
+
+.col-12 .col-10 .simpleInterest, .col-12 .col-10 .palindrome, .col-12 .col-10 .circle, .col-12 .col-10 .cloneObject, .col-12 .col-10 .employee{
+    display: none;
 }
 
+.col-12 .col-10 .col-8 .resultButton{
+    padding: 20px;
+    font-size: 15px;
+    background-color: #fff;
+    border: 2.5px solid;
+    border-radius: 6px;
+    border-color: #00c89b;
+    margin: auto;
+    display: block;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.col-12 .col-10 .col-8 .resultButton:hover
+{
+    background-color: #01f1bd;
+}
+
+.col-12 .col-10 .col-8 .result-container{
+    margin: 20% auto auto auto;
+    font-size: 22px;
+    text-align: center;
+    color: rgb(196, 34, 34);
+    visibility: hidden;
+}
+
+.col-12 .col-10 .col-8 .result-container code{
+    background-color: #ccc;
+    padding: 10px;
+    display: inline-block;
+}
 
 @media only screen and (max-width: 700px){
     .col-12 .col-10, .col-12 .col-10 .col-8{
@@ -88,5 +120,13 @@
     }
     .col-12 .col-10 .navbar ul .custom-li.active{
         border-bottom:4px solid rgb(255, 136, 0);
+    }
+
+    .col-12 .col-10 .col-8 .resultButton{
+        width: 100%;
+    }
+
+    .col-12 .col-10 .col-8 .result-container{
+        margin: 50% auto auto auto;
     }
 }

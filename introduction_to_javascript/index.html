@@ -16,28 +16,48 @@
                 </div>
                 <div class="navbar" id="navbar">
                     <ul>
-                        <li class="custom-li active">
-                            <button>Simple Interest</button>
+                        <li class="custom-li">
+                            <button onclick="exercise(event)" value="simpleInterest">Simple Interest</button>
                         </li>
                         <li class="custom-li">
-                            <button>Palindrome</button>
+                            <button onclick="exercise(event)" value="palindrome">Palindrome</button>
                         </li>
                         <li class="custom-li">
-                            <button>Circle</button>
+                            <button onclick="exercise(event)" value="circle">Circle</button>
                         </li>
                         <li class="custom-li">
-                            <button>Clone Object</button>
+                            <button onclick="exercise(event)" value="cloneObject">Clone Object</button>
                         </li>
                         <li class="custom-li">
-                            <button>Employee</button>
+                            <button onclick="exercise(event)" value="employee">Employee</button>
                         </li>
                     </ul>
                 </div>
             </header>
 
             <section  class="col-10 body">
-                <div class="col-8 si" id="si">
-                    Simple Interest
+                <div class="col-8 simpleInterest" id="simpleInterest">
+                    <button class="resultButton" onclick="result(event,1)">Calculate Simple Interest</button>
+                    <div class="result-container"><code id="simpleInterest-result"></code></div>
+                </div>
+                <div class="col-8 palindrome" id="palindrome">
+                        <button class="resultButton" onclick="result(event,2)">Check for palindrome</button>
+                        <div class="result-container"><code id="palindrome-result"></code></div>
+                </div>
+                <div class="col-8 circle" id="circle">
+                    <button class="resultButton" onclick="result(event,3)">Calculate the Area of a circle</button>
+                    <div class="result-container">
+                        <code id="circle-result"></code>
+                    </div>
+                </div>
+                <div class="col-8 cloneObject" id="cloneObject">
+                    <button class="resultButton" onclick="result(event,4)">Get Cloned Object</button>
+                    <div class="result-container">
+                        <code id="clonedObject-result"></code>
+                    </div>
+                </div>
+                <div class="col-8 employee" id="employee">
+                    Employee
                 </div>
             </section>
 
