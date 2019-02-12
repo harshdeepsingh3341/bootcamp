@@ -1,0 +1,92 @@
+.col-12{
+    width: 100%;
+    margin: auto;
+}
+
+.col-12 .col-10{
+    width: 91.66%;
+    margin:auto;
+}
+
+.col-12 .col-10 .col-8{
+    width: 83.32%;
+    margin: auto;
+}
+
+.col-12 header h1{
+    color: #00c89b;
+    font-weight: bold;
+    display: inline;
+}
+
+.col-12 .col-10 .navbar{
+    background-color: #00c89b;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    margin-top: 5px;
+    display: block;
+}
+
+.col-12 .col-10 .navbar ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+.col-12 .col-10 .navbar ul .custom-li{
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.col-12 .col-10 .navbar ul .custom-li button{
+    background-color: #00c89b;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 17px;
+    padding: 10px 10px;
+    transition: 0.3s;
+}
+
+.col-12 .col-10 .navbar ul .custom-li button:hover{
+    background-color:#00b48d;
+}
+
+.col-12 .col-10 .navbar ul .custom-li.active{
+    border-bottom:4px solid rgb(255, 136, 0);
+}
+
+.col-12 .col-10 .r-nav{
+    float: right;
+    display: none;
+}
+
+.col-12 .col-10 .r-nav i{
+    color: #00c89b;
+}
+
+.col-12 .body{
+    margin: 15px auto 8px auto;
+}
+.col-12 .col-10 .si{
+    /* display: none; */
+}
+
+
+@media only screen and (max-width: 700px){
+    .col-12 .col-10, .col-12 .col-10 .col-8{
+        width: 100%;
+        text-align: center;
+    }
+    .col-12 .col-10 .navbar{
+        display: none;
+    }
+    .col-12 .col-10 .r-nav{
+        display: inline;
+        float: right;
+    }
+    .col-12 .col-10 .navbar ul .custom-li.active{
+        border-bottom:4px solid rgb(255, 136, 0);
+    }
+}
