@@ -210,14 +210,7 @@ body .col-12 .body .col-8 .small-image-container .small-image-caption{
         margin: 9px auto 9px auto;
         width: 100%;
     }
-    body .col-12 .body .col-8 .small-image-container:nth-child(odd){
-        
-    }
-
-    body .col-12 .body .col-8 .small-image-container:nth-child(even){
-        
-    }
-
+    
     body .col-12 .body .col-8 .small-image-container .small-image{
         background-color: #353535;
         height: 315px;
