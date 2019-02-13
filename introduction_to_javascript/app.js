@@ -141,44 +141,24 @@ function employeeOp(event,id){
         })
         resultHtml.innerHTML = str;
 
-    }
-    if(id === 3){
-        var mytotal = [];
-        employees.forEach(function (currentValue){
-            var index = -1;
-            for(var i=0; i<mytotal.length; i++){
-                if(mytotal[i].age == currentValue.age){
-                    index = i;
-                    break;
-                }
-            }
+    }    
 
-        
-        if(index === -1){
-            mytotal.push({
-                emps:[currentValue],
-                age:currentValue.age,
-                toString: function(){
-                    var str = "{<br>Age: " + this.age + ",<br>Employees:{<br>";
-                    this.emps.forEach((value) => {
-                        str += "{ name: " + value.name + ", age: " + value.age + "}<br>";
-                    })
-                    return str;
-                }
-            })
-        }
-        else{
-            mytotal[index].emps.push(currentValue);
-        }
-        // total = mytotal;
-        });
+    if(id === 3){
+        var result = employees.reduce((total, value) => {
+            if(total.hasOwnProperty(value.age)) total[value.age].push(value);
+            else{
+                total[value.age]=[value];
+            }
+            return total;
+        },{}); 
+        console.log(result);
         var resultHtml = document.getElementById('employee-result');
         resultHtml.style.visibility = "visible";
-        var str = "<div style='text-align:center'>Employees Grouped wrt to <b>AGE</b>:<br></div>";
-        mytotal.forEach((value) => {
-            str += value.toString();
-            str += "<br>";
-        })
+        var str = "<div style='text-align:center'>Employees Grouped wrt to <b>AGE</b>:<br></div>"; 
+
+        Object.keys(result).forEach((value) =>{
+            str += "{Age: " + value + ", Employees:{ " + JSON.stringify(result[value]) + "}<br>"
+        });
         resultHtml.innerHTML = str;
     }
     if(id === 4){
