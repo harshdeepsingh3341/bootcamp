@@ -42,9 +42,14 @@ function result(event, id){
     if(id === 1){
         var amount = parseFloat(prompt("Please enter the amount (in " + "Rs.)"));
         var interest = parseFloat(prompt("Please enter the interest"));
-        var time = parseFloat(prompt("Please enter the time(in years)"));
+        var time = Number(Math.round(parseFloat(prompt("Please enter the time(in years)")) + 'e2') + 'e-2');
+        console.log(parseInt(time));
+        console.log((Number(Math.round(time%1 +'e1')+'e-1'))*10);
+        console.log(parseInt(time)*12);  
+        time = (parseInt(time)*12) + ((Number(Math.round(time%1 +'e1')+'e-1'))*10);
+        console.log(time);
         if(amount || interest || time){
-            var result = (amount * interest * time)/100;
+            var result = Number(Math.round(((amount * interest * time)/1200) + 'e3')+'e-3');
             var resultHtml = document.getElementById('simpleInterest-result');resultHtml.style.visibility="visible";
             resultHtml.innerHTML = "Simple Interest = &#8377; " + result;
         }
