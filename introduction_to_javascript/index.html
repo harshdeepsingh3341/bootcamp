@@ -57,9 +57,71 @@
                     </div>
                 </div>
                 <div class="col-8 employee" id="employee">
-                    Employee
+                    <div class="col-6 form-wrapper">
+                        <div class="form-header">
+                            <h2>Employee Details</h2>
+                        </div>
+                        <form onsubmit="employeeOp(event,1);return false;">
+                            <table>
+                                <tr class="form-group">
+                                    <td>
+                                        <label for="name">Name*</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" id="name" name="name" required>
+                                    </td>
+                                </tr>
+
+                                <tr class="form-group">
+                                    <td>
+                                        <label for="age">Age*</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" id="age" name="age" min="18" step="1" required>
+                                    </td>
+                                </tr>
+
+                                <tr class="form-group">
+                                    <td>
+                                        <label for="salary">Salary*</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" id="salary" name="salary" step="500" required>
+                                        <span>&#8377;</span>
+                                    </td>
+                                </tr>
+
+                                <tr class="form-group">
+                                    <td>
+                                        <label for="dob">Date of Birth*</label>
+                                    </td>
+                                    <td>
+                                        <input type="date" id="dob" name="dob" max="" required>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="form-footer">
+                                <input type="button" onclick="employeeOp(event,1)" value="Add Employee">
+
+                                <a href="#employee-result"><input type="button" value="Salary > 5000" onclick="employeeOp(event,2)"></a>
+
+                                <a href="#employee-result"><input type="button" value="Group on age" onclick="employeeOp(event,3)"></a>
+
+                                <a href="#employee-result"><input type="button" value="Fetch Some Employees and operation on Salary" onclick="employeeOp(event,4)"></a>
+
+                                <a href="#employee-result"><input type="button" value="Display All" onclick="employeeOp(event,5)"></a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="result-container" style="margin-top: 500px">
+                        <code id="employee-result">sdf</code>
+                    </div>
                 </div>
             </section>
+
+            <footer class="col-10">
+                <div><a href="https://jsbin.com/taxaser/1/edit?html,css,js,output">JS Bin demo</a></div>
+            </footer>
 
         </section>  
     </body>

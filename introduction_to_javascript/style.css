@@ -1,3 +1,7 @@
+body{
+    margin: 0px;
+}
+
 .col-12{
     width: 100%;
     margin: auto;
@@ -10,6 +14,11 @@
 
 .col-12 .col-10 .col-8{
     width: 83.32%;
+    margin: auto;
+}
+
+.col-12 .col-10 .col-8 .col-6{
+    width: 74.98%;
     margin: auto;
 }
 
@@ -36,6 +45,7 @@
 .col-12 .col-10 .navbar ul .custom-li{
     display: inline-block;
     margin-left: 15px;
+    transition: 0.5s;
 }
 
 .col-12 .col-10 .navbar ul .custom-li button{
@@ -47,6 +57,7 @@
     font-size: 17px;
     padding: 10px 10px;
     transition: 0.5s;
+    outline: none;
 }
 
 .col-12 .col-10 .navbar ul .custom-li button:hover{
@@ -85,6 +96,7 @@
     display: block;
     cursor: pointer;
     transition: 0.5s;
+    outline-color: #00daaa;
 }
 
 .col-12 .col-10 .col-8 .resultButton:hover
@@ -93,7 +105,7 @@
 }
 
 .col-12 .col-10 .col-8 .result-container{
-    margin: 20% auto auto auto;
+    margin: 20% 0% auto auto;
     font-size: 22px;
     text-align: center;
     color: rgb(196, 34, 34);
@@ -104,10 +116,120 @@
     background-color: #ccc;
     padding: 10px;
     display: inline-block;
+    width:80%
+}
+
+.col-12 .col-10 .col-8 .form-wrapper{
+    border: thin solid #ccc;
+    border-radius: 4px;
+    display: block;
+}
+
+.col-12 .col-10 .col-8 .col-6 .form-header{
+    background-color: #ccc;
+    display: block;
+    color: white;
+    padding: 20px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.col-12 .col-10 .col-8 .col-6 .form-header h2{
+    margin: 0px;
+}
+
+.col-12 .col-10 .col-8 .col-6 table{
+    margin: auto;
+}
+
+.col-12 .col-10 .col-8 .col-6 .form-group, .col-12 .col-10 .col-8 .col-6 table td{
+    padding: 9px 20px 8px 20px;
+    margin: auto;
+}
+
+.col-12 .col-10 .col-8 .col-6 .form-group input{
+    display: inline-block;
+    border: thin solid #ccc;
+    border-radius: 3px;
+    transition: 0.5s;
+    outline: none;
+}
+
+.col-12 .col-10 .col-8 .col-6 .form-group input:focus{
+    border: thin solid #00c89b;
+    outline: none;
+}
+
+.col-12 .col-10 .col-8 .col-6 .form-group input:hover{
+    border: thin solid #00e2b1;
+    outline: none;
+}
+
+.col-12 .col-10 .col-8 .col-6 .form-group #salary{
+    border-left: thin solid #00c89b;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    margin-left: 0px;
+}
+
+.col-12 .col-10 .col-8 .col-6 .form-group input[type="date"]{
+    background-color: #00c89b;
+    width: 100%;
+    color: white
+}
+
+.col-12 .col-10 .col-8 .col-6 .form-group span{
+    background-color: #00c89b;
+    color: white;
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+}
+
+.col-12 .col-10 .col-8 .col-6 .form-footer{
+    background-color: #ccc;
+    display: inline-block;
+    width: 100%;
+    color: white;
+    padding: 8px 0px 20px 0px;
+    
+}
+
+.col-12 .col-10 .col-8 .col-6 .form-footer input[type="button"], .col-12 .col-10 .col-8 .col-6 .form-footer input[type="submit"] {
+    background-color: #00c89b;
+    border: none;
+    color: white;
+    font-size: 13px;
+    padding: 8px 15px;
+    font-weight: bold;
+    float: right;
+    margin: 20px 20px 0px 0px;
+    outline-color: #00daaa;
+    cursor: pointer;
+
+}
+
+.col-12 footer{
+    background-color: #00c89b;  
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 19px;
+    font-weight: bold;
+    /* display: inline-block; */
+    /* width: 100%; */
+}
+
+.col-12 footer div{
+    margin-left: 15px;
 }
 
 @media only screen and (max-width: 700px){
-    .col-12 .col-10, .col-12 .col-10 .col-8{
+    .col-12 .col-10, .col-12 .col-10 .col-8, .col-12 .col-10 .col-8 .col-6{
         width: 100%;
         text-align: center;
     }
@@ -129,4 +251,20 @@
     .col-12 .col-10 .col-8 .result-container{
         margin: 50% auto auto auto;
     }
+
+    .col-12 .col-10 .col-8 .col-6 .form-footer input[type="button"], .col-12 .col-10 .col-8 .col-6 .form-footer input[type="submit"]{
+        float: none;
+        display: inline-block;
+        width: 90%;
+        margin: 2% auto;
+        outline-color: #00daaa;
+        cursor: pointer;
+    }
+
+    .col-12 footer{
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
 }
