@@ -1,0 +1,15 @@
+button{
+    background-color: #00c89b;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin:10px auto 30px auto;
+    cursor: pointer;
+    display: block;
+    padding: 20px;
+}
+
+button[id='my-button']{
+    background-color: #009b79;
+    color: white;
+}
