@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Exercise</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <section class="col-12">
+            <header class="col-10">
+                <h1>JavaScript Exercises</h1>
+                <div id="r-nav" class="r-nav">
+                    <i class="fa fa-reorder fa-2x" onclick="rnavShow()"></i>
+                </div>
+                <div class="navbar" id="navbar">
+                    <ul>
+                        <li class="custom-li">
+                            <button onclick="exercise(event)" value="simpleInterest">Simple Interest</button>
+                        </li>
+                        <li class="custom-li">
+                            <button onclick="exercise(event)" value="palindrome">Palindrome</button>
+                        </li>
+                        <li class="custom-li">
+                            <button onclick="exercise(event)" value="circle">Circle</button>
+                        </li>
+                        <li class="custom-li">
+                            <button onclick="exercise(event)" value="cloneObject">Clone Object</button>
+                        </li>
+                        <li class="custom-li">
+                            <button onclick="exercise(event)" value="employee">Employee</button>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+
+            <section  class="col-10 body">
+                <div class="col-8 simpleInterest" id="simpleInterest">
+                    <button class="resultButton" onclick="result(event,1)">Calculate Simple Interest</button>
+                    <div class="result-container"><code id="simpleInterest-result"></code></div>
+                </div>
+                <div class="col-8 palindrome" id="palindrome">
+                        <button class="resultButton" onclick="result(event,2)">Check for palindrome</button>
+                        <div class="result-container"><code id="palindrome-result"></code></div>
+                </div>
+                <div class="col-8 circle" id="circle">
+                    <button class="resultButton" onclick="result(event,3)">Calculate the Area of a circle</button>
+                    <div class="result-container">
+                        <code id="circle-result"></code>
+                    </div>
+                </div>
+                <div class="col-8 cloneObject" id="cloneObject">
+                    <button class="resultButton" onclick="result(event,4)">Get Cloned Object</button>
+                    <div class="result-container">
+                        <code id="clonedObject-result"></code>
+                    </div>
+                </div>
+                <div class="col-8 employee" id="employee">
+                    <div class="col-6 form-wrapper">
+                        <div class="form-header">
+                            <h2>Employee Details</h2>
+                        </div>
+                        <form onsubmit="employeeOp(event,1);return false;">
+                            <table>
+                                <tr class="form-group">
+                                    <td>
+                                        <label for="name">Name*</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" id="name" name="name" required>
+                                    </td>
+                                </tr>
+
+                                <tr class="form-group">
+                                    <td>
+                                        <label for="age">Age*</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" id="age" name="age" min="18" step="1" required>
+                                    </td>
+                                </tr>
+
+                                <tr class="form-group">
+                                    <td>
+                                        <label for="salary">Salary*</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" id="salary" name="salary" step="500" required>
+                                        <span>&#8377;</span>
+                                    </td>
+                                </tr>
+
+                                <tr class="form-group">
+                                    <td>
+                                        <label for="dob">Date of Birth*</label>
+                                    </td>
+                                    <td>
+                                        <input type="date" id="dob" name="dob" max="" required>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="form-footer">
+                                <input type="button" onclick="employeeOp(event,1)" value="Add Employee">
+
+                                <a href="#employee-result"><input type="button" value="Salary > 5000" onclick="employeeOp(event,2)"></a>
+
+                                <a href="#employee-result"><input type="button" value="Group on age" onclick="employeeOp(event,3)"></a>
+
+                                <a href="#employee-result"><input type="button" value="Fetch Some Employees and operation on Salary" onclick="employeeOp(event,4)"></a>
+
+                                <a href="#employee-result"><input type="button" value="Display All" onclick="employeeOp(event,5)"></a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="result-container" style="margin-top: 500px">
+                        <code id="employee-result">sdf</code>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="col-10">
+                <div><a href="https://jsbin.com/taxaser/1/edit?html,css,js,output">JS Bin demo</a></div>
+            </footer>
+
+        </section>  
+    </body>
+</html>
