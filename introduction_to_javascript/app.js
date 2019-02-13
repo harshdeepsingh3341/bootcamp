@@ -42,9 +42,14 @@ function result(event, id){
     if(id === 1){
         var amount = parseFloat(prompt("Please enter the amount (in " + "Rs.)"));
         var interest = parseFloat(prompt("Please enter the interest"));
-        var time = parseFloat(prompt("Please enter the time(in years)"));
+        var time = Number(Math.round(parseFloat(prompt("Please enter the time(in years)")) + 'e2') + 'e-2');
+        console.log(parseInt(time));
+        console.log((Number(Math.round(time%1 +'e1')+'e-1'))*10);
+        console.log(parseInt(time)*12);  
+        time = (parseInt(time)*12) + ((Number(Math.round(time%1 +'e1')+'e-1'))*10);
+        console.log(time);
         if(amount || interest || time){
-            var result = (amount * interest * time)/100;
+            var result = Number(Math.round(((amount * interest * time)/1200) + 'e3')+'e-3');
             var resultHtml = document.getElementById('simpleInterest-result');resultHtml.style.visibility="visible";
             resultHtml.innerHTML = "Simple Interest = &#8377; " + result;
         }
@@ -69,6 +74,12 @@ function result(event, id){
             }
             else
                 resultHtml.innerHTML = "The given word/number is <b>not</b> a palindrome."
+        }
+        else
+        {
+            var resultHtml = document.getElementById('palindrome-result');
+            resultHtml.style.visibility = "visible";
+            resultHtml.innerHTML = "The given word/number is a <b>palindrome</b>."
         }
     }
     if(id === 3){
@@ -108,6 +119,8 @@ function result(event, id){
 
 function employeeOp(event,id){
     console.log(event);
+    if(resultHtml)
+        resultHtml.style.visibility = "hidden";
     if(id === 1){
         var emp = {};
         emp.name = document.getElementById('name').value;
@@ -139,6 +152,7 @@ function employeeOp(event,id){
             str += value.toString();
             str += "<br>";
         })
+        str += "<i style='text-align=center'>END</i>"
         resultHtml.innerHTML = str;
 
     }    
@@ -159,6 +173,7 @@ function employeeOp(event,id){
         Object.keys(result).forEach((value) =>{
             str += "{Age: " + value + ", Employees:{ " + JSON.stringify(result[value]) + "}<br>"
         });
+        str += "<i style='text-align=center'>END</i>"
         resultHtml.innerHTML = str;
     }
     if(id === 4){
@@ -167,13 +182,17 @@ function employeeOp(event,id){
         });
         var str = "<div style='text-align:center'>Employees and salary Operation:<br><div>"
         myEmps.forEach((value) => {
-            value.salary = parseFloat(value.salary) +  500;
+            value.salary = parseFloat(value.salary) * 5;
             str += "{" + value.toString() +"}<br>"
         })
         console.log(myEmps);
-        var resultHtml = document.getElementById('employee-result');
-        resultHtml.style.visibility = "visible";
-        resultHtml.innerHTML = str;
+        if(myEmps.length !==0)
+        {
+            var resultHtml = document.getElementById('employee-result');
+            resultHtml.style.visibility = "visible";
+            str += "<i style='text-align=center'>END</i>"
+            resultHtml.innerHTML = str;
+        }
     }
     if(id === 5){
         var str = "<div style='text-align:center'>Employees:<br><div>";
@@ -187,4 +206,3 @@ function employeeOp(event,id){
 
     }
 }
-
