@@ -119,6 +119,8 @@ function result(event, id){
 
 function employeeOp(event,id){
     console.log(event);
+    if(resultHtml)
+        resultHtml.style.visibility = "hidden";
     if(id === 1){
         var emp = {};
         emp.name = document.getElementById('name').value;
@@ -150,6 +152,7 @@ function employeeOp(event,id){
             str += value.toString();
             str += "<br>";
         })
+        str += "<i style='text-align=center'>END</i>"
         resultHtml.innerHTML = str;
 
     }    
@@ -170,6 +173,7 @@ function employeeOp(event,id){
         Object.keys(result).forEach((value) =>{
             str += "{Age: " + value + ", Employees:{ " + JSON.stringify(result[value]) + "}<br>"
         });
+        str += "<i style='text-align=center'>END</i>"
         resultHtml.innerHTML = str;
     }
     if(id === 4){
@@ -178,13 +182,17 @@ function employeeOp(event,id){
         });
         var str = "<div style='text-align:center'>Employees and salary Operation:<br><div>"
         myEmps.forEach((value) => {
-            value.salary = parseFloat(value.salary) +  500;
+            value.salary = parseFloat(value.salary) * 5;
             str += "{" + value.toString() +"}<br>"
         })
         console.log(myEmps);
-        var resultHtml = document.getElementById('employee-result');
-        resultHtml.style.visibility = "visible";
-        resultHtml.innerHTML = str;
+        if(myEmps.length !==0)
+        {
+            var resultHtml = document.getElementById('employee-result');
+            resultHtml.style.visibility = "visible";
+            str += "<i style='text-align=center'>END</i>"
+            resultHtml.innerHTML = str;
+        }
     }
     if(id === 5){
         var str = "<div style='text-align:center'>Employees:<br><div>";
@@ -198,4 +206,3 @@ function employeeOp(event,id){
 
     }
 }
-
