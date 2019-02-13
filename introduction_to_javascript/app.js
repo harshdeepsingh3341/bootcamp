@@ -75,6 +75,12 @@ function result(event, id){
             else
                 resultHtml.innerHTML = "The given word/number is <b>not</b> a palindrome."
         }
+        else
+        {
+            var resultHtml = document.getElementById('palindrome-result');
+            resultHtml.style.visibility = "visible";
+            resultHtml.innerHTML = "The given word/number is a <b>palindrome</b>."
+        }
     }
     if(id === 3){
         var radius = parseFloat(prompt("Please Enter the radius of the circle"));
