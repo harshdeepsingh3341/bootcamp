@@ -1,0 +1,12 @@
+ul li {
+    background-color: #ccc;
+    margin: 30px auto;
+}
+
+.result{
+    font-size: 18px;
+    color: rgb(179, 179, 179);
+    text-align: center;
+    margin: 10px;
+    /* bottom: 0px; */
+}
