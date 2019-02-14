@@ -20,10 +20,11 @@
 
 .container ul li button{
     float: right;
-    background-color: #ccc;
+    background-color: rgba(204, 204, 204, 0);
     outline: none;
     border: none;
     padding: 0px;
+    margin: 0px;
     transition: 0.5s;
 }
 
