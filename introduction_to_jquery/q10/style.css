@@ -1,0 +1,73 @@
+.col-12{
+    width: 100%;
+    margin: auto;
+}
+
+.col-10{
+    width: 91.67%;
+    margin: auto;
+}
+
+.col-12 .navbar{
+    background-color: #00c89b;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.col-12 .navbar ul{
+    display: inline;
+    padding: 0px;
+}
+
+.col-12 .navbar ul .menu{
+    display: inline-block;    
+    padding: 10px 10px 10px 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    
+}
+
+.col-12 .navbar ul li:hover{
+    background-color: #00af89;
+    color: white;
+}
+
+.col-12 .navbar ul .menu .sub-menu-shown{
+    position: absolute;
+    margin: 10px 0px 0px 30px;
+    padding: 0px 0px 0px 0px;
+    display: block;
+    background-color: rgba(204, 204, 204, 0.336);
+    border: none;
+    overflow: none;
+    width: 17%;
+}
+
+.col-12 .navbar ul li .sub-menu-hidden{
+    position: absolute;
+    margin: 10px;
+    display: none;
+}
+
+.col-12 .navbar ul li .sub-menu-shown ul li{
+    display: block;
+    background-color: none;
+    padding: 10px;
+    color: black;
+    font-size: 14px;
+    margin: 10px;
+    transition: 0.5s
+}
+
+.col-12 .navbar ul li .sub-menu-shown ul li{
+    margin: 0px;
+}
+
+.col-12 .navbar ul li .sub-menu-shown ul li:hover{
+    background-color: #ccc;
+}
+
+.col-12 .navbar ul li .sub-menu-shown ul hr{
+    margin: 0px;
+    border-bottom: 0px;
+}
