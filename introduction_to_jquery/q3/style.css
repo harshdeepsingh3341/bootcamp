@@ -1,0 +1,16 @@
+.my-new, .my-one-new, .my-two-new{
+    background-color: #ccc;
+    font-size: 18px;
+    margin: 10px;
+}
+
+button{
+    background-color: #00c89b;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin:10px auto 30px auto;
+    cursor: pointer;
+    display: block;
+    padding: 20px;
+}

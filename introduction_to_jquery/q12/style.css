@@ -1,0 +1,28 @@
+.parent{
+    background-color:red;
+    font-size: 22px;
+    outline: none;
+    border: none;   
+    display: block;
+    width: 91%;
+    margin: auto;
+    padding: 20px;  
+    cursor: pointer;
+}
+.parent .child{
+    font-size: 15px;
+    background-color: #00c89b;
+    width: 85%;
+    margin: auto;
+    padding: 5px;
+    margin: 20px auto;
+    display: block;
+}
+
+.result{
+    font-size: 18px;
+    color: rgb(179, 179, 179);
+    text-align: center;
+    margin: 10px;
+    /* bottom: 0px; */
+}

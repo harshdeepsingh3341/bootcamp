@@ -1,0 +1,23 @@
+#main{
+    margin-top: 10%;
+}
+
+#main .target{
+    font-size: 18px;
+    background-color: #ccc;
+    border: 2.5px solid #00c89b;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+}
+
+button{
+    background-color: #00c89b;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin:10px auto 30px auto;
+    cursor: pointer;
+    display: block;
+    padding: 20px;
+}
