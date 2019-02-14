@@ -13,3 +13,9 @@ button[id='my-button']{
     background-color: #009b79;
     color: white;
 }
+
+.footer{
+    text-align: center;
+    color: #ccc;
+
+}
