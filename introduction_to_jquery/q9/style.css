@@ -1,4 +1,4 @@
-form select{
+select{
     margin: 20px auto;
     padding: 10px;
     display: block;
@@ -10,12 +10,17 @@ form select{
 
 }
 
-div{
+#selectedValues{
     font-size: 18px;
     color: #ccc;
     text-align: center;
     margin: 10px;
 }
+
+#result{
+    display: none;
+}
+
 
 /* form input[type="submit"]{
     background-color: #00c89b;

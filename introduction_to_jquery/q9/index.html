@@ -6,19 +6,22 @@
     </head>
     <body>
         
-        <form>
-            <select name="select" id="select">
-                <option value="1">option1</option>
-                <option value="2">option2</option>
-                <option value="3">option3</option>
-                <option value="4">option4</option>
-                <option value="5">option5</option>
-                <option value="6">option6</option>
-                <option value="7">option7</option>
-            </select>
-        </form>
+        <select name="select" id="select">
+            <option value="1">option1</option>
+            <option value="2">option2</option>
+            <option value="3">option3</option>
+            <option value="4">option4</option>
+            <option value="5">option5</option>
+            <option value="6">option6</option>
+            <option value="7">option7</option>
+        </select>
 
-        <div id="selectedValues"> Nothing changed in the select as of now.</div>
+        <div id="selectedValues"> 
+            <p id="init">Nothing changed in the select as of now.</p>
+
+            <p id="result">Selected Values: </p>
+
+        </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="app.js"></script>

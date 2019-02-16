@@ -1,12 +1,11 @@
 $('select').change(($event) => {
     var value = $('select').val();
 
-    var div_html = $('#selectedValues').html().trim();
+    $('option[value='+value+']').attr("disabled","disabledg");
 
-    if(div_html === "Nothing changed in the select as of now."){
-        $('#selectedValues').html("Selected Values: " + value);
-    }
-    else{
-        $('#selectedValues').append(", " + value);
-    }
+    $('#init').css("display","none");
+
+    $('#result').css("display","block");
+
+    $('#result').append(value + ", ");
 })
