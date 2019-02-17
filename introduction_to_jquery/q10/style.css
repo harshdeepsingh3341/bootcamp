@@ -1,3 +1,14 @@
+.loader {
+    border: 10px solid rgb(231, 231, 231);
+    border-radius: 50%;
+    border-top: 10px solid #00b68e;
+    width: 12px;
+    height: 12px;
+    animation: spin 2s linear infinite;
+    display: none;
+    cursor: auto;
+}
+
 .col-12{
     width: 100%;
     margin: auto;
@@ -24,7 +35,14 @@
     padding: 10px 10px 10px 20px;
     cursor: pointer;
     transition: 0.5s;
+    text-align: center;
+    margin: auto;
+
     
+}
+
+.menu .sub-menu-shown li i{
+    float: right;
 }
 
 .col-12 .navbar ul li:hover{
@@ -32,36 +50,48 @@
     color: white;
 }
 
-.col-12 .navbar ul .menu .sub-menu-shown{
+.col-12 .navbar ul .menu>.sub-menu-shown{
     position: absolute;
-    margin: 10px 0px 0px 30px;
+    margin: 10px 0px 0px 0px;
+    /* left:200px; */
     padding: 0px 0px 0px 0px;
-    display: block;
+    display: inline-block;
     background-color: rgba(204, 204, 204, 0.336);
     border: none;
     overflow: none;
     width: 17%;
 }
 
+.col-12 .navbar ul .parent .sub-menu-shown{
+    position: absolute;
+    margin: 0px 0px 0px 0px;
+    /* left:200px; */
+    /* top: 10px; */
+    padding: 0px 0px 0px 0px;
+    display: inline-block;
+    background-color: rgba(204, 204, 204, 0.336);
+    border: none;
+    overflow: none;
+    width: 100%;
+}
+
 .col-12 .navbar ul li .sub-menu-hidden{
     position: absolute;
-    margin: 10px;
+    /* margin: 10px; */
     display: none;
 }
 
 .col-12 .navbar ul li .sub-menu-shown ul li{
-    display: block;
+    display: none;
     background-color: none;
     padding: 10px;
     color: black;
     font-size: 14px;
-    margin: 10px;
+    /* margin: 10px; */
     transition: 0.5s
 }
 
-.col-12 .navbar ul li .sub-menu-shown ul li{
-    margin: 0px;
-}
+
 
 .col-12 .navbar ul li .sub-menu-shown ul li:hover{
     background-color: #ccc;
@@ -81,4 +111,9 @@
         width: 50%;
         margin: 10px 0px 0px 10px;
     }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
