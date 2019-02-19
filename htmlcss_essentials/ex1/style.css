@@ -2,6 +2,7 @@ body{
     margin: 0px;
     font-family: 'Roboto';
     font-size: 15px;
+    lette
 }
 
 .col-12{
@@ -52,11 +53,12 @@ h4{
 h1, h2, h3, h4{
     font-weight: normal;
     margin: 0px;
+    text-align: center;
 }
 
 .row{
     margin: 10% 0px 0px 0px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .row .container{
@@ -66,10 +68,11 @@ h1, h2, h3, h4{
 }
 
 .container .logo{
-    display: inline-block;
+    display: block;
     /* width: 10%; */
     margin: auto;
     padding-top: 48px;
+
 }
 
 .container .col-10{
@@ -85,22 +88,83 @@ h1, h2, h3, h4{
     padding: 13px 15px;
     /* display: block; */
     /* margin: auto; */
-    width: 80%;
-    left: 0px;
-    right: 0px;
-    margin-top: 32px;   
+    width:93.18%;
+    /* left: 0px; */
+    /* right: 0px; */
+    margin: 0px;
     border: thin solid rgb(218, 218, 218);
     border-radius: 3px;
-    height: 28px;
     outline: none;
     transition:0.4s;
+    display: block;
+    /* box-sizing: border-box;   */
+    height: 28px;
+
     /* outline-color: #4439ea; */
 }
  
 .container input[type="text"]:focus{
-    border: 2px solid #2011ff;
+    border: 2px solid #1a73e8;
 }
 
 .container input[type="text"]::placeholder{
     color: #ccc;
+    /* margin: 13px 15px; */
+}
+
+.container button{
+    outline: none;
+    border: none;
+    background-color: white;
+    color: #1a73e8;
+    font-weight: 700;
+    /* margin: 9px auto 0px auto; */
+    /* float: left; */
+    /* margin: auto; */
+    width: fit-content;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.8s;
+    padding: 10px 0px;
+    border-radius: 4px;
+}
+
+.container button:hover{
+    background: #f5f9fe radial-gradient(circle, transparent 1%, #f5f9fe 1%) center/15000%;
+}
+
+.container button:active{
+    background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.container div{
+    padding: 15px 0px;
+}
+
+.container a{
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.container div .signin{
+    float: right;
+    display: block;
+    background-color: #1a73e8;
+    color: white;
+    padding: 8px 23px;
+    border-radius: 4px;
+}
+
+.container div .signin:hover{
+    background: #1273f1 radial-gradient(circle, transparent 1%, #1273f1 1%) center/15000%;
+    box-shadow: 2px 2px 4px rgba(0,0,0,.2);
+}
+
+.container div .signin:active{
+    background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
 }
