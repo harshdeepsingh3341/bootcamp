@@ -1,0 +1,106 @@
+body{
+    margin: 0px;
+    font-family: 'Roboto';
+    font-size: 15px;
+}
+
+.col-12{
+    width: 100%;
+    margin: auto;
+}
+
+.col-10{
+    width:91.67%;
+    margin: auto;
+}
+
+.col-8{
+    width: 83.33%;
+    margin: auto;
+}
+
+.col-6{
+    width: 75%;
+    margin: auto;
+}
+
+.col-4{
+    width: 66.667%;
+    margin: auto;
+}
+
+.col-2{
+    width: 40%;
+    margin: auto;
+}
+
+.col-1{
+    width: 50%;
+    margin: auto;
+}
+
+h1{
+    font-size: 24px;
+    padding-top: 16px;
+}
+
+h4{
+    font-size: 16px;
+    padding-top: 8px;
+}
+
+h1, h2, h3, h4{
+    font-weight: normal;
+    margin: 0px;
+}
+
+.row{
+    margin: 10% 0px 0px 0px;
+    text-align: center;
+}
+
+.row .container{
+    border: thin solid rgb(218, 218, 218);
+    border-radius: 6px;
+    /* padding: 20px; */
+}
+
+.container .logo{
+    display: inline-block;
+    /* width: 10%; */
+    margin: auto;
+    padding-top: 48px;
+}
+
+.container .col-10{
+    padding-top: 24px;
+    display: block;
+    /* width: inherit; */
+    margin: auto;
+    /* border-left: 40px solid transparent; */
+    /* border-right: 40px solid transparent; */
+}
+
+.container input[type="text"]{
+    padding: 13px 15px;
+    /* display: block; */
+    /* margin: auto; */
+    width: 80%;
+    left: 0px;
+    right: 0px;
+    margin-top: 32px;   
+    border: thin solid rgb(218, 218, 218);
+    border-radius: 3px;
+    height: 28px;
+    outline: none;
+    transition:0.4s;
+    /* outline-color: #4439ea; */
+}
+ 
+.container input[type="text"]:focus{
+    border: 2px solid #2011ff;
+}
+
+.container input[type="text"]::placeholder{
+    color: #ccc;
+}
