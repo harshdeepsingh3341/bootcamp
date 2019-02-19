@@ -1,0 +1,33 @@
+#one{
+    font-size: 20px;
+}
+
+#one h1{
+    font-size: 3em;
+}
+
+#one p{
+    font-size: 0.5em;
+}
+
+#two{
+    font-size: 30px;
+}
+
+#two h1{
+    font-size: 4rem;
+}
+
+#two p{
+    font-size: 1rem;
+}
+
+#three p{
+    padding-top: 30px;
+    text-indent: 50px;
+}
+
+#four{
+    text-shadow: 2px 2px 2px #dedede;
+    font-size: 20px;
+}
