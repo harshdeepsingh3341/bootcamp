@@ -1,0 +1,35 @@
+button{
+    padding: 10px;
+    color: black;
+    border: 2px solid #00c89b;
+    outline: none;
+    font-size: 20px;
+    background-color: #fff;
+    transition: 1s;
+    display: block;
+    margin: 10px;
+}
+
+#two{
+    text-decoration: line-through;
+}
+
+#three{
+    word-break: break-all;
+    width: 100px;
+}
+
+#four{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100px;
+    white-space: nowrap;
+}
+
+button:hover{
+    background-color: whitesmoke;
+}
+
+#one:hover{
+    text-decoration: underline;
+}
