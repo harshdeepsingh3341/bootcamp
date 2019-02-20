@@ -1,0 +1,43 @@
+body{
+    margin: 0px;
+}
+
+.page-wrapper{
+    width: 98%;
+    margin: auto;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.col-10{
+    width: 83.34%;
+    margin: auto;
+}
+
+.page-wrapper header{
+    padding-top: 30px;  
+}
+
+header span{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+header .img{
+    /* float: left; */
+    width: 10%;
+}
+
+header .times{
+    width: 88.5%;
+    font-size: 70px;
+    font-weight: 600;    
+    letter-spacing: 2px;
+    text-align: right;
+    background-clip: text;
+    color: transparent;
+    font-family: serif; 
+    background-image:linear-gradient(to right,#c20089, #eb0078, #490097, #c20089, #690095,#312a9f, #42008d, #009be2,#00c1e5);
+   -webkit-background-clip: text;
+  /* -webkit-text-fill-color: transparent; */
+}
