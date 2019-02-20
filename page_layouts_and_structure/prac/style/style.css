@@ -1,0 +1,129 @@
+body{
+    width: 100%;
+}
+
+.col-10{
+    width: 83.34%;
+    margin: auto;
+}
+
+.container{
+    margin: 15px 0px;
+}
+
+header{
+    background-color: rgb(45, 250, 96);
+    width: 100%;
+    padding: 15px 3px;
+}
+
+.logo, nav, .social{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+header .logo{
+    margin-left: 20px;
+    width:24%;
+}
+
+header .social {
+    margin: 0px;
+    float: right;
+}
+
+header .social li{
+    display: inline;
+    padding-right: 5px;    
+}
+
+header .social li i{
+    color: white;
+    transition: 0.5s;
+}
+
+header .social li i:hover, header nav a:hover{
+    color: black;
+}
+
+header nav{
+    font-weight: 600;
+}
+
+.banner{
+    height: 20em;
+    overflow: hidden;
+
+}
+
+.banner img{
+    width: 100%;
+    height: auto;
+    /* box-sizing: border-box; */
+}
+
+.highlights{
+    background-color: #ccc;
+    overflow: hidden;
+}
+
+.highlights ul{
+    width: 100%;
+}
+
+.highlights ul li i {
+    color: rgb(45, 250, 96);
+}
+
+.highlights ul li{
+    background-color: #fff;
+    display: inline-block;
+    text-align: center;
+    padding: 20px;  
+    margin-right: 0.2%;
+    width: 21%;
+    position: relative;
+}
+
+.highlights ul li:last-child{
+    margin-right: 0px;
+}
+
+.highlights ul li button{
+    display: inline-block;
+    background-color: #4e5b7d;
+    border: thin solid #4e5b7d;
+    outline: none;
+    color: white;
+    font-size: 17px;
+    position: absolute;
+    padding: 5px 15px;
+    cursor: pointer;
+    width: 50%;
+    left: 0;
+    right: 0;
+    /* margin-right: 100%; */
+    margin: 0 auto;
+    transition: 0.5s;
+    
+}
+
+.highlights ul li button:hover{
+    background-color: #3f5da7;
+}
+
+h2{
+    font-size: 20px;
+    color: rgb(113, 205, 218);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
