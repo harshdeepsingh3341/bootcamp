@@ -1,0 +1,147 @@
+h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+article{
+    font-style: italic;
+    margin-bottom: 9px;
+}
+
+a{
+    text-decoration: none;
+    color: #f845ad;
+    display: block;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+.page-wrapper{
+    width: 98%;
+    margin: auto;
+    /* background-color: #fff; */
+    padding: 10px;
+}
+
+.page-wrapper section{
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+.col-10{
+    width: 83.34%;
+    margin: auto;
+}
+
+.page-wrapper .row{
+    padding-top: 30px;  
+}
+
+header span{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+header .times{
+    width: 88.5%;
+    font-size: 70px;
+    font-weight: 600;    
+    letter-spacing: 2px;
+    text-align: right;
+    background-clip: text;
+    color: transparent;
+    font-family: serif; 
+    background-image:linear-gradient(to right,#c20089, #eb0078, #490097, #c20089, #690095,#312a9f, #42008d, #009be2,#00c1e5);
+   -webkit-background-clip: text;
+}
+
+.tag-line div{
+    border: 3px solid black;
+    /* border-bottom: thick solid black; */
+    width:20%;
+    margin: auto;
+    padding: 10px 10px 0px 10px;
+    height: 40px;
+}
+
+.tag-line span{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: auto;
+    background-color: #fff;
+    height: 30px;
+    padding-top: 5px;
+}
+
+.tag-line{
+    font-size: 27px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    position: relative;
+}
+
+.two-columns .first{
+    width: 48.5%;
+    margin: 0px;
+    display: inline-block;
+    margin-right: 1%;
+    vertical-align: top;
+}
+
+.two-columns .first div, .two-columns .second div{
+    margin-bottom: 6px;
+}
+
+.first img{
+    width: 100%;
+    height: 269px;
+}
+
+.two-columns .second{
+    width: 48.5%;
+    display: inline-block;
+    margin-left: 1%;
+    vertical-align: top;
+}
+
+.two-columns .second .img-div{
+    width: 100%;
+    height: 130px;
+    overflow: hidden;
+    margin-bottom: 2%;
+}
+
+.two-columns .second img{
+    width: 100%;
+}
+
+.two-columns .second img[alt="GeekCombat02"]{
+    position: relative;
+    top: -53%;
+}
+
+.social{
+    /* display: block; */
+    margin: auto;
+    text-align: center;
+}
+
+.social a{
+    display: inline;
+    transition: 0.5s;
+}
+
+.social i{
+    border: 2.5px solid;
+    border-radius: 100px;
+    padding: 15px;
+}
+
+.social a:hover{
+    color: #ccc;
+}
