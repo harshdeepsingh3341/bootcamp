@@ -2,7 +2,6 @@ body{
     margin: 0px;
     font-family: 'Roboto';
     font-size: 15px;
-    lette
 }
 
 .col-12{
@@ -88,7 +87,7 @@ h1, h2, h3, h4{
     padding: 13px 15px;
     /* display: block; */
     /* margin: auto; */
-    width:93.18%;
+    width:100%;
     /* left: 0px; */
     /* right: 0px; */
     margin: 0px;
@@ -97,8 +96,8 @@ h1, h2, h3, h4{
     outline: none;
     transition:0.4s;
     display: block;
-    /* box-sizing: border-box;   */
-    height: 28px;
+    line-height: 30px;
+    box-sizing: border-box;  
 
     /* outline-color: #4439ea; */
 }
@@ -107,9 +106,29 @@ h1, h2, h3, h4{
     border: 2px solid #1a73e8;
 }
 
-.container input[type="text"]::placeholder{
+/* .container input[type="text"]::placeholder{
     color: #ccc;
-    /* margin: 13px 15px; */
+} */
+
+.float-label{
+    position: relative;
+}
+
+.float-label label{
+    color: #ccc;
+    position: absolute;
+    margin: 18px;
+    top: 15px;
+    transition: 0.4s;
+    padding: 0px 5px;
+    cursor: text;
+}
+
+.container input[type="text"]:focus+label{
+    top: -13px;
+    left: -10px;
+    color: #1a73e8;
+    background-color: #fff;
 }
 
 .container button{
