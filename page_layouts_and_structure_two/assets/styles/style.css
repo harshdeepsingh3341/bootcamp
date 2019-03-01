@@ -1,0 +1,274 @@
+h1, h2, h3, h4, h5, h6{
+    font-weight: bold;
+}
+
+.page-wrapper{
+    font-family: Roboto, AdobeInvisFont, MyriadPro-Regular;
+}
+
+nav{
+    background-image: url(../images/header-bg.jpg);
+}
+
+a{
+    text-decoration: none;
+}
+
+.col-12{
+    width: 100%;
+    margin: auto;
+}
+
+.col-10{
+    width: 91.67%;
+    margin: auto;    
+}
+
+.col-8{
+    width: 83.33%;
+    margin: auto;
+}
+
+.col-7{
+    width: 96%;
+    margin: auto;
+}
+
+.row{
+    padding: 10px 0px;
+}
+
+nav{
+    color: #fff
+}
+
+.left, .right{
+    display: inline-block;
+    /* border: thin solid black; */
+}
+
+.shadow-box{
+    -webkit-box-shadow: 2px 3px 49px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 3px 49px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 3px 49px 0px rgba(0,0,0,0.75);
+    height: fit-content;
+}
+
+header .left{
+    width: 50%;
+}
+
+header .right{
+    /* width: 49%; */
+}
+
+header .logo{
+    padding-right: 20px;
+    border-right: thin solid #fff;
+    display: inline-block;
+    vertical-align: middle
+}
+
+header ul{
+    list-style: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header .lang{
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+header .lang>ul li .fa-angle-down, header .lang>ul li:hover .fa-angle-up, header .nav-items a .fa-angle-down, header .nav-items a:hover .fa-angle-up{
+    display: inline;
+    transition: 0.5s;
+}
+
+header .lang>ul li:hover .fa-angle-down, header .lang>ul li .fa-angle-up, header .nav-items a:hover .fa-angle-down, header .nav-items a .fa-angle-up{
+    display: none;
+    transition: 0.5s;
+}
+
+footer{
+    padding: 50px;
+}
+
+.nav-items{
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    /* width: 100%; */
+}
+
+.nav-items a{
+    color: #fff;
+    padding: 0px 15px;
+    vertical-align: middle;
+    display: inline-block;
+    border: none;
+    transition: 0.2s;
+}
+
+.nav-items a[href="#about"]:hover, .nav-items a[href="#ecosystems"]:hover, .nav-items a[href="#resources"]:hover, .nav-items a[href="#contactus"]:hover{
+    border-bottom: 3px solid white;
+    border-end-end-radius : 40px;
+}
+
+.nav-items a i, .nav-items a img{
+    vertical-align: middle;
+}
+
+.banner .flexslider{
+    border: none;
+}
+
+.banner{
+    /* background-image: url(../images/banner-bg.jpg); */
+    /* width: 100%; */
+    /* border: none; */
+    position: relative;
+}
+
+.banner .banner-text{
+    color: white;
+    position: absolute;
+    top:30%;
+    text-align: center;
+    width: 100%;
+}
+
+.banner-text h2{
+    font-size: 60px;
+}
+
+.banner-text p{
+    padding: 0.7% 0px;
+    font-size: 18px;
+}
+
+.banner-text button {
+    background: linear-gradient(to left, #f93f04, #ec6519);
+    border: none;
+    outline: none;
+    margin-top: 2px;
+    border-radius: 40px;
+    padding: 14px 30px;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+.featured-videos .video, .featured-videos i{
+    margin: 2.5% 0px;
+}
+
+.featured-videos h2 {
+    font-size: 40px;
+    color: rgba(62, 71, 84, 255);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.featured-videos .videos-container > .left{
+    width: 56%;
+    vertical-align: middle;
+    position: relative;
+}
+
+.featured-videos .videos-container > .right{
+    width: 40%;
+    vertical-align: middle;
+}
+
+.featured-videos img{
+    width: 100%;
+    vertical-align: middle;
+}
+
+.featured-videos .video img{
+    width: auto;
+    height: auto;
+    bottom: 39px;
+    right: 40px;
+    position: relative;
+}
+
+.featured-videos .video .play-button{
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    margin: 0;
+    left: 22%;
+    transform: scale(0.7);
+    opacity: 0.89;
+}
+
+.featured-videos .video .left{
+    width: 120px;
+    height: 80px;
+    overflow: hidden;
+    margin-right: 10%;
+    vertical-align: middle;
+    border-radius: 10px;
+    position: relative;
+}
+
+.featured-videos .right .fa-chevron-up, .featured-videos .right .fa-chevron-down{
+    text-align: right;
+    display: block;
+    padding-right: 6%;
+}
+
+.featured-videos .designation{
+    font-size: 14px;
+    color: rgba(118, 129, 145, 255);
+    display: block;
+}
+
+.play-button{
+    background-color: #ff9e00;
+    display: inline-block;
+    width: 63px;
+    height: 63px;
+    border-radius: 100%;
+    margin: 20px;
+}
+
+.play-button span{
+    display: block;
+    margin: 28% auto;
+    width: 1px;
+    height: 1px;
+    box-sizing: border-box;
+    border-left: 18px solid white;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+}
+
+.video-caption{
+    width: 307px;
+    height: 114px;
+    background-color: rgba(255, 255, 255, 0.87);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 50px;
+    right: 54px;
+}
+
+.video-caption > .play-button{
+    /* vertical-align: middle; */
+    position: absolute;
+    right: 80%;
+}
+
+.video-caption .caption{
+    display: block;
+    text-align: center;
+    padding-top: 13%;
+}
