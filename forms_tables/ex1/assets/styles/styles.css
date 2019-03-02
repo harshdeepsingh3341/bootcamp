@@ -1,0 +1,21 @@
+table{
+    margin: auto;
+    background: url(http://api.thumbr.it/whitenoise-361x370.png?background=bfb050ff&noise=626262&density=66&opacity=29);
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+table th{
+    font-weight: bold;
+}
+
+table tr{
+}
+
+table td, table th{
+    padding: 4px
+}
+
+table td{
+    text-align: left;
+}
