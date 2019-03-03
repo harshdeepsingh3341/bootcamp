@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms and Tables</title>
+        <link rel="stylesheet" href="../assets/reset.css">
+        <link rel="stylesheet" href="assets/styles/styles.css">
+    </head>
+    <body>
+        
+        <div class="page-wrapper">
+            <section class="col">
+                <div class="form-container">
+                    <div class="form-header">
+                        <hr>
+                        <h2>Register</h2>
+                        <span class="col-sm">Create your account. It's free and only takes a minute.</span>
+                    </div>
+                    <div class="form col-sm">
+                        <form action="#">
+                            <table>
+                                <tr class="name" cellspacing="10px">
+                                    <td>
+                                        <input type="text" name="firstName" id="firstName" placeholder="First Name">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="email" name="email" id="email" placeholder="Email">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="password" name="password" id="password" placeholder="Password">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password">
+                                    </td>
+                                </tr>
+
+                                <tr class="tnc">
+                                    <td colspan="2">
+                                        <input type="checkbox" name="tnc" id="tnc"> <span>
+                                            I accept the <a href="#">Terms of Use</a> & <a href="#">Privacy Policy</a>.
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr class="submit">
+                                    <td colspan="2">
+                                        <input type="submit" value="Register Now">
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+
+                <span class="signin">
+                    Already have an account? <a href="#">Sign in</a>
+                </span>
+
+            </section>
+        </div>
+
+    </body>
+</html>

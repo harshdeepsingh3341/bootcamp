@@ -1,0 +1,140 @@
+h2{
+    font-weight: bold;
+    font-size: 35px;
+    background: #f2f3f7;
+    position: absolute;
+    top: -18px;
+    padding: 0px 20px;
+    left: 30.5%;
+}
+
+.page-wrapper{
+    background-color: #63738a;
+    color: rgb(83, 64, 64);
+    height: 100%;
+    padding: 30px 0px;
+
+}
+
+.col{
+    width: 30%;
+    margin: auto;
+}
+
+.col-sm{
+    width: 85%;
+    margin: auto;
+}
+.form-container{
+    background-color: #f2f3f7;
+    padding: 35px 0px 25px 0px;
+    text-align: center;
+    -webkit-box-shadow: 2px 3px 13px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 3px 13px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 3px 13px 0px rgba(0,0,0,0.75);
+    border-radius: 4px;
+}
+
+.form-container hr{
+    margin: 23px 0px;
+}
+
+.form-header{
+    position: relative;
+    text-align: center;
+}
+
+.form-header span, .form span, .signin{
+    color: rgb(153, 153, 153);
+    display: inline-block;
+    padding: 10px 0px;
+    width: 100%;
+}
+
+.form-container table{
+    width: 100%;
+}
+
+.form-container .form{
+    padding: 15px 0px; 
+}
+
+.form table{
+    border-collapse: separate;
+}
+
+.form td{
+    padding-bottom: 17px;
+
+}
+
+.form .name td {
+    width: 44%;
+
+    /* border: thin solid black; */
+}
+
+.form .name td:first-child{
+    padding-right: 3%;
+}
+
+.form .name td:last-child{
+    padding-left: 3%;
+}
+
+.form input{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 13px;
+    border: thin solid #ccc;
+    outline: none;
+    border-radius: 3px;
+    transition: 0.4s;
+}
+
+.form input:focus{
+    border: thin solid rgb(138, 138, 138);
+}
+
+.form .tnc{
+    text-align: left;
+}
+
+.form span{
+    padding: 0;
+    width: auto;
+}
+
+.form span a{
+    text-decoration: none;
+    color: rgb(10, 116, 10)
+}
+
+.form span a:hover{
+    text-decoration: underline;
+}
+
+.form input[type="checkbox"]{
+    width: auto;
+}
+
+.form .submit input{
+    background: linear-gradient(to bottom, #57b158, #459344);
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.signin{
+    color: white;
+    text-align: center;
+    display: block;
+    padding: 20px 0px;
+}
+
+.signin a{
+    color: white;
+}
