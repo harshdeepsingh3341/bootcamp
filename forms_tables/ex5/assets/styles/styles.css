@@ -1,0 +1,63 @@
+.col-12{
+    width: 100%;
+    margin:auto;
+}
+
+.col-10{
+    width: 91.667%;
+    margin: auto;
+}
+
+.page-wrapper{
+    background-color: #a5cef3;
+    padding: 10px;
+}
+
+table{
+    background-color: #cfe2f3;
+    width: 100%;
+    text-align: center;
+    display: table;
+    border-collapse: collapse;
+    border: thin solid black;
+    text-transform: uppercase;
+}
+
+.body table{
+    margin: 0% 5%;
+    width: 90%;
+    border: none;
+    border-collapse: separate;
+    border-spacing: 10px;
+
+}
+
+.body .main{
+    width: 60%;
+}
+
+.body table td{
+    border: thin solid black;
+    height: 200px;
+}
+
+.body .two-col td{
+    width: 40%;
+}
+
+table td{
+    border: thin solid black;
+    vertical-align: middle;
+}
+
+.header td{
+    padding:50px 0px;
+}
+
+.nav td{
+    padding: 17px 0px;
+}
+
+.footer td{
+    padding: 25px 0px;
+}
