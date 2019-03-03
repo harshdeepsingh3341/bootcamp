@@ -1,0 +1,39 @@
+table{
+    margin: auto;
+    background: url(http://api.thumbr.it/whitenoise-361x370.png?background=bfb050ff&noise=626262&density=66&opacity=29);
+    border-collapse: separate;
+    border-spacing: 10px;
+    border:auto;
+    display: table;
+    border: solid;
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+    border-color: grey;
+}
+
+table caption{
+    font-weight: bold;
+    font-size: 19px;
+    margin: 10px auto;
+}
+
+td, th{
+    border:2px solid grey;
+}
+
+table th{
+    font-weight: bold;
+}
+
+table tr{
+}
+
+table td, table th{
+    padding: 4px
+}
+
+table td{
+    text-align: left;
+}
