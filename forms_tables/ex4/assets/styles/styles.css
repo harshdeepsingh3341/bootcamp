@@ -1,0 +1,40 @@
+body{
+    background: url(http://api.thumbr.it/whitenoise-361x370.png?background=bfb050ff&noise=626262&density=66&opacity=29);
+}
+
+table{
+    margin: auto;
+    border: 10px solid grey;
+    background-color: #fff;
+    border-collapse: collapse;
+    width: 550px;
+}
+
+table .time{
+    text-align: right;
+}
+
+table .men{
+    background-color: #98ccfe;
+}
+
+table .women{
+    background-color: #98fe98;
+}
+
+table thead{
+    background-color: #fefe00;
+}
+
+table caption{
+    padding: 20px 0px;
+    font-size: 19px;
+    font-weight: bold;
+    background-color: rgba(192, 190, 190, 0.637);
+}
+
+table td, table th{
+    padding: 5px;
+    border: 2px solid grey;
+}
+
