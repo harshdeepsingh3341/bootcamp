@@ -76,3 +76,21 @@
         opacity: 0.5;
     }
 }
+
+
+.container .transition{
+    width: 200px;
+    height: 100px;
+    background-color: #ff00ff;
+    margin: 30px auto;
+    border: 1px solid #000;
+    transition: 3s;
+}
+
+.container .transition:active{
+    height: 200px;
+    width: 100px;
+    background-color: #000;
+    border: 2px solid #ff00ff;
+    transform: scaleX(2) scaleY(3);
+}
