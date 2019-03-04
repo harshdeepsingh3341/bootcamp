@@ -50,3 +50,29 @@
     background-position: -436px -27px;
 
 }
+
+.container .animated{
+    background-color: green;
+    border: thin solid black;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 30px;
+    margin-top: 20px;
+    animation: animation-one;
+    animation-duration: 4s;
+    animation-delay: 3s;
+}
+
+@keyframes animation-one{
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 0.5;
+    }
+}
