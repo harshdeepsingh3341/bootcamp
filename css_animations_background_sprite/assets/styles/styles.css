@@ -4,3 +4,13 @@
     background-image: url(../images/videoblocks-white-texture-geometric-abstract-triangle-seamless-loop_hdesm7kp9z_thumbnail-full01.png);
     background-repeat: no-repeat;
 }
+
+.content{
+    background-image: url(../images/image.jpeg);
+    width: 500px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border: thin solid black;
+    margin: auto;
+}
