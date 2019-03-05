@@ -201,7 +201,7 @@ hr{
     padding: 10px 0px;
     text-align: center;
     color: rgb(138, 138, 138);
-    min-height: fit-content;
+    min-height: 89px;
 }
 
 .stats .row{
