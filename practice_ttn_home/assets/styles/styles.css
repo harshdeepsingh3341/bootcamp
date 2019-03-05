@@ -1,9 +1,52 @@
+h1, h2, h3, h4, h5, h6{
+    font-weight: bold;
+}
+
+h1{
+    font-size: 40px
+}
+
+h2{
+    font-size: 0px
+}
+
+h3{
+    font-size: 40px;
+    position: relative;
+    padding-bottom: 50px
+}
+
+h3:after{
+    content: "";
+    width: 5%;
+    height: 5px;
+    background-color: #f1860b;
+    border: thin solid #f1860b;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+   transform:translateX(-50%);
+}
+
+h4{
+    font-size: 27px;
+}
+
 a{
     text-decoration: none;
 }
 
 a:hover{
     text-decoration: underline;
+}
+
+hr{
+    width: 5%;
+    margin: 30px auto;
+    height: 5px;
+    background-color: #f1860b;
+    border: thin solid #f1860b;
+    color: #f1860b;
 }
 
 .row{
@@ -85,4 +128,108 @@ a:hover{
 
 .right-nav-down a:last-child{
     margin-right: 0px;
+}
+
+.banner-container{
+    position: relative;
+}
+
+.banner-container .banner-bg{
+    background-image: url(../images/banner.jpeg);
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.banner-container .banner-text{
+    position: absolute;
+    top: 0;
+    height: 600px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 59%, rgba(255,255,255,1) 87%);
+    font-weight: normal;
+    padding-top: 100px
+}
+.banner-text h3{
+    font-weight: 100;
+    text-align: center;
+}
+
+.banner-text b{
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.banner-text .row{
+    width: 89%;
+    margin: auto;
+    padding: 0px;
+}
+
+.banner-text .services{
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.services div{
+    width: 21.9%;
+    text-align: center;
+    color: rgb(73, 73, 73);
+    display: inline-block;
+    margin-right: 1.375%;
+    margin-left: 1.375%;
+    border-right: 1px solid;
+    border-image: linear-gradient(to bottom, transparent 30%, rgb(51, 52, 53), transparent 60%) 1 100%;
+}
+
+.services div:first-child{
+    margin-left: 0px;
+}
+
+.services div:last-child{
+    margin-right: 0px;
+    border: none;
+}
+
+.services div i{
+    padding-bottom: 15px;
+}
+
+.banner-text .stats{
+    border: thin solid #ccc;
+    margin: 40px 0px;
+    padding: 10px 0px;
+    text-align: center;
+    color: rgb(138, 138, 138);
+    min-height: fit-content;
+}
+
+.stats .row{
+    min-height: 100%;
+}
+
+.stats h4{
+    color: #f58e3d;
+    margin-bottom: 10px;
+    font-weight: 100;
+
+
+}
+
+.stats .row div{
+    border-right: thin solid #ccc;
+    width: 15%;
+    display: inline-block;
+    padding: 10px 20px;
+    vertical-align: middle;
+    min-height: 89px;
+}
+
+.stats .row div:last-child{
+    border-right: none;
+}
+
+.stats .row span{
+    word-wrap:break-word;
+    display: inline-block;
 }
