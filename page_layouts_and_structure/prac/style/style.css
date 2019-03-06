@@ -9,7 +9,7 @@ body{
 
 .container{
     padding: 0px 0px 15px 0px;
-    margin: 6px 0px;
+    margin: 6px auto;
     box-sizing: border-box;
 }
 
@@ -73,7 +73,6 @@ header nav{
 
 .banner img{
     width: 100%;
-    height: auto;
     /* box-sizing: border-box; */
 }
 
