@@ -191,6 +191,11 @@ footer{
     vertical-align: middle;
 }
 
+.featured-videos .video{
+    display: block;
+    list-style: none;
+}
+
 .featured-videos .video img{
     width: auto;
     height: auto;
@@ -201,11 +206,10 @@ footer{
 
 .featured-videos .video .play-button{
     position: absolute;
-    z-index: 1;
-    top: 10%;
     margin: 0;
-    left: 22%;
-    transform: scale(0.7);
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%, -50%) scale(0.6);
     opacity: 0.89;
 }
 
@@ -242,7 +246,10 @@ footer{
 
 .play-button span{
     display: block;
-    margin: 28% auto;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 1px;
     height: 1px;
     box-sizing: border-box;
