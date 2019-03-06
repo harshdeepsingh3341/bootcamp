@@ -41,7 +41,7 @@ a:hover{
 
 .banner-wrapper{
     background-image: url(../images/banner.jpg);
-    background-size: cover
+    background-size: cover;
     background-repeat: no-repeat;
     position: relative;
 }
