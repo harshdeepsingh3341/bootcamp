@@ -55,18 +55,14 @@ h1, h2, h3, h4{
     text-align: center;
 }
 
-.row{
+.wrapper{
     margin: 10% 0px 0px 0px;
-    /* text-align: center; */
-}
-
-.row .container{
     border: thin solid rgb(218, 218, 218);
     border-radius: 6px;
     /* padding: 20px; */
 }
 
-.container .logo{
+.wrapper .logo{
     display: block;
     /* width: 10%; */
     margin: auto;
@@ -74,7 +70,7 @@ h1, h2, h3, h4{
 
 }
 
-.container .col-10{
+.wrapper .col-10{
     padding-top: 24px;
     display: block;
     /* width: inherit; */
@@ -83,7 +79,7 @@ h1, h2, h3, h4{
     /* border-right: 40px solid transparent; */
 }
 
-.container input[type="text"]{
+.wrapper input[type="text"]{
     padding: 13px 15px;
     /* display: block; */
     /* margin: auto; */
@@ -102,11 +98,11 @@ h1, h2, h3, h4{
     /* outline-color: #4439ea; */
 }
  
-.container input[type="text"]:focus{
+.wrapper input[type="text"]:focus{
     border: 2px solid #1a73e8;
 }
 
-/* .container input[type="text"]::placeholder{
+/* .wrapper input[type="text"]::placeholder{
     color: #ccc;
 } */
 
@@ -118,20 +114,20 @@ h1, h2, h3, h4{
     color: #ccc;
     position: absolute;
     margin: 18px;
-    top: 15px;
+    top: 0;
     transition: 0.4s;
     padding: 0px 5px;
     cursor: text;
 }
 
-.container input[type="text"]:focus+label{
-    top: -13px;
+.wrapper input[type="text"]:focus+label{
+    top: -29px;
     left: -10px;
     color: #1a73e8;
     background-color: #fff;
 }
 
-.container button{
+.wrapper button{
     outline: none;
     border: none;
     background-color: white;
@@ -145,30 +141,31 @@ h1, h2, h3, h4{
     cursor: pointer;
     transition: 0.8s;
     padding: 10px 0px;
+    margin: 10px 0px;
     border-radius: 4px;
 }
 
-.container button:hover{
+.wrapper button:hover{
     background: #f5f9fe radial-gradient(circle, transparent 1%, #f5f9fe 1%) center/15000%;
 }
 
-.container button:active{
+.wrapper button:active{
     background-color: #6eb9f7;
   background-size: 100%;
   transition: background 0s;
 }
 
-.container div{
-    padding: 15px 0px;
-}
-
-.container a{
+.wrapper a{
     color: #1a73e8;
     text-decoration: none;
     font-weight: 700;
 }
 
-.container div .signin{
+.wrapper div{
+    margin: 10px 0px;
+}
+
+.wrapper div .signin{
     float: right;
     display: block;
     background-color: #1a73e8;
@@ -177,12 +174,12 @@ h1, h2, h3, h4{
     border-radius: 4px;
 }
 
-.container div .signin:hover{
+.wrapper div .signin:hover{
     background: #1273f1 radial-gradient(circle, transparent 1%, #1273f1 1%) center/15000%;
     box-shadow: 2px 2px 4px rgba(0,0,0,.2);
 }
 
-.container div .signin:active{
+.wrapper div .signin:active{
     background-color: #6eb9f7;
   background-size: 100%;
   transition: background 0s;
