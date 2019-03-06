@@ -5,6 +5,10 @@ h3{
 }
 
 article{
+    margin-bottom: 14px;
+}
+
+article .author{
     font-style: italic;
     margin-bottom: 9px;
 }
@@ -16,6 +20,22 @@ a{
     font-weight: 600;
     cursor: pointer;
 
+}
+
+table{
+    width: 100%;
+}
+
+table img{
+    width: 100%;
+}
+
+table .two-imgs{
+    height: 185px;
+    overflow: hidden;
+}
+td, tr{
+    vertical-align: top;
 }
 
 .page-wrapper{
@@ -97,10 +117,10 @@ header .times{
     margin-bottom: 6px;
 }
 
-.first img{
+/* .first img{
     width: 100%;
     height: 269px;
-}
+} */
 
 .two-columns .second{
     width: 48.5%;
@@ -109,7 +129,7 @@ header .times{
     vertical-align: top;
 }
 
-.two-columns .second .img-div{
+/* .two-columns .second .img-div{
     width: 100%;
     height: 130px;
     overflow: hidden;
@@ -118,12 +138,12 @@ header .times{
 
 .two-columns .second img{
     width: 100%;
-}
+} */
 
-.two-columns .second img[alt="GeekCombat02"]{
+/* .two-columns .second img[alt="GeekCombat02"]{
     position: relative;
     top: -53%;
-}
+} */
 
 .social{
     /* display: block; */
