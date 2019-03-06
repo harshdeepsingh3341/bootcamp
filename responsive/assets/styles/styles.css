@@ -44,6 +44,7 @@ a:hover{
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    background-attachment: fixed;
 }
 
 .banner-wrapper:before{
@@ -265,6 +266,7 @@ p{
         width: 100%;
         padding: unset;
     }
+
     
     .right .nav-small{
         display: inline-block;
@@ -272,6 +274,7 @@ p{
 
     .content .two-columns .first, .content .two-columns .second{
         min-height: auto;
+        padding: unset;
     }
 
     .content .two-columns .my-button{
