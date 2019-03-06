@@ -59,6 +59,7 @@ p{
     background-image: url(../images/banner.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
     position: relative;
 }
 
