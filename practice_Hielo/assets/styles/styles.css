@@ -1,0 +1,84 @@
+h1, h2, h3, h4, h5, h6{
+    font-weight: bold;
+}
+
+h1{
+    font-size: 30px;
+}
+
+h3{
+    font-size: 7em;
+    font-weight: lighter;
+    padding: 9px 0px;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+}
+
+.wrapper{
+    width: 85%;
+    margin: auto;
+}
+
+.banner{
+    color: white;
+    background-image: url(../images/bg.jpg);
+}
+
+.banner a{
+    color: white;
+}
+
+.banner a:hover{
+    color: #ccc;
+}
+
+header{
+    padding: 20px 10px;
+    position: relative;
+}
+
+header:after, header:before{
+    content: '';
+    position: absolute;
+    /* display: inline-block; */
+    clear: both;
+}
+
+header nav{
+    float: right;
+    cursor: pointer;
+}
+
+header article{
+    text-align: center;
+}
+
+header article p{
+    text-transform: uppercase;
+    font-size: 18px;
+    color: rgb(129, 129, 129);
+    position: relative;
+    padding: 10px 0px;
+}
+
+header article p:after{
+    content: '';
+    position: absolute;
+    border: 0.5px solid #ccc;
+    width: 40%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
