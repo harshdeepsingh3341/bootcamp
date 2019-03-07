@@ -66,14 +66,22 @@ a:hover{
     font-size: 17px;
 }
 
+.header-container .left{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header-container .left a:hover{
+    text-decoration: none;
+}
+
 .header-container .right
 {
-    position: absolute;
-    right: 0px;
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative;
+    float: right;
     text-align: right;
-    width: 100%;
+    width: 40%;
+    vertical-align: middle;
 }
 
 .right .nav-desktop{
@@ -86,8 +94,12 @@ a:hover{
     display:none;
 }
 
-.header-container .right a{
+.header-container a{
     color: white;
+    
+}
+
+.header-container .right a{
     padding-right: 2%;
 }
 
@@ -267,7 +279,10 @@ p{
         padding: unset;
     }
 
-    
+    .header-container .right{
+        width: initial;    
+    }
+
     .right .nav-small{
         display: inline-block;
     }
