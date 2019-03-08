@@ -80,6 +80,7 @@ section{
     background-size: cover;
     background-position: 0 -219px;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .wrapper .content-wrapper{
