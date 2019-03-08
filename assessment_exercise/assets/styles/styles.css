@@ -1,3 +1,261 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    line-height: 40px;
+}
+
 h1, h2, h3, h4, h5, h6{
     font-weight: bold;
+}
+
+h1{
+    text-indent: -1000px;
+    background-image: url(../images/logo.png);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    font-size: 35px;
+    width: 137px;
+    height: 42px;
+}
+
+h2{
+    font-size: 28px;
+}
+
+h3{
+    font-size: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.wrapper{
+    width: 90%;
+    margin: auto;
+}
+
+header{
+    background-color: #ffd849;
+    color: rgb(41, 41, 41);
+}
+
+header .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a{
+    color: rgb(41, 41, 41);
+}
+
+header li:first-child{
+    margin-right: initial;
+    padding-right: 10px;
+    border-right: 0.6px solid rgb(41, 41, 41);
+}
+
+header li{
+    margin: 18px 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+nav h2{
+    text-indent: -700px;
+    overflow: hidden;
+    background-image: url(../images/right-logo.png);
+    background-size: cover;
+    width: 125px;
+    height: 29px;
+}
+
+section{
+    background-image: url(../images/background-image.png);
+    background-size: cover;
+    background-position: 0 -219px;
+    background-repeat: no-repeat;
+}
+
+.wrapper .content-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+section, .wrapper .content-wrapper{
+    height: 665px;    
+}
+
+.quick-test{
+    width: 40%;
+}
+
+button{
+    background: #ec2678;
+    outline: none;
+    border: thin solid #ec2678;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    line-height: 40px;
+    padding: 2px 15px;
+    cursor: pointer;
+    margin: 20px 0px;
+    transition: 0.5s;
+    border-radius: 3.5px;
+}
+
+button:hover{
+    background-color: #e22071;
+}
+
+.content-wrapper .contact-us{
+    background-color: #fff;
+    border-radius: 3.5px;
+    -webkit-box-shadow: 2px 4px 6px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 4px 6px -1px rgba(0,0,0,0.75);
+    box-shadow: 2px 4px 6px -1px rgba(0,0,0,0.75);
+    width: 30%;
+    padding: 30px 0px;
+}
+
+.form-header{
+    text-align: center;
+}
+
+.form-header, .form-content{
+    width: 90%;
+    margin: auto;
+}
+
+.form-header h3{
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.contact-us small{
+    color: red;
+    font-weight: lighter;
+    font-size: 12px;
+}
+
+input{
+    border: none;
+    outline: none;
+    width: 100%;
+    border-bottom: thin solid rgb(160, 160, 160);
+    line-height: 30px;
+    margin: 10px 0px;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+input:hover{
+    border-bottom: thin solid #ffd849;
+}
+
+input:focus{
+    border-bottom: 1.2px solid #e6b609;
+
+}
+
+input[name="name"]{
+    text-transform: capitalize;
+}
+
+input[type="submit"]{
+    font-size: 18px;
+    border: none;
+    width: 40%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1a7814;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3.5px;
+}
+
+input[type="submit"]:hover{
+    background-color: #136d0c;
+}
+
+footer{
+    background-color: #054ab8;
+    color: whitesmoke;
+    padding: 40px 0px;
+}
+
+footer .wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .img-container{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #2e70da;
+    border: thin solid #2e70da;
+    border-radius: 50px;
+    /* padding: 20px; */
+}
+
+footer .img-container img{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer h3{
+    font-weight: lighter;
+}
+
+.customer-feedbacks{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 24px;
+    width: 70%;
+}
+
+.customer-feedbacks div{
+    width: 48%;
+}
+
+.customer-feedbacks .customer{
+    margin: 20px 0px;
+    width: 100%;
+}
+
+.customer img{
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.customer span{
+    text-transform: uppercase;
+    /* position: relative; */
+    display: inline;
+    margin: 0px 10px;
+    vertical-align: middle;
+    letter-spacing: 3px
+}
+
+.customer span:before{
+    content: "- ";
+
+    display: inline;
 }
