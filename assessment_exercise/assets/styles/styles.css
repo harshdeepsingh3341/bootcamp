@@ -54,19 +54,31 @@ header a{
     color: rgb(41, 41, 41);
 }
 
-header li:first-child{
+.nav-lg li:first-child{
     margin-right: initial;
     padding-right: 10px;
     border-right: 0.6px solid rgb(41, 41, 41);
 }
 
-header li{
+li{
     margin: 18px 10px;
     display: inline-block;
     vertical-align: middle;
 }
 
-nav h2{
+.lg{
+    display: inline-block;
+}
+
+.sm{
+    display: none;
+}
+
+.nav-lg{
+    position: relative;
+}
+
+.nav-lg h2{
     text-indent: -700px;
     overflow: hidden;
     background-image: url(../images/right-logo.png);
@@ -75,10 +87,36 @@ nav h2{
     height: 29px;
 }
 
+.nav-sm{
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* display: inline-block; */
+    background-color:rgba(0, 0, 0, 0.692);
+    right: 0;
+    text-align: center;
+}
+
+.nav-sm li{
+    display: block;
+    margin: 18px 27px;
+    border: none;
+}
+
+.nav-sm li a{
+    color: #fff;
+
+}
+
+.nav-sm li:first-child{
+    margin-right: 27px;
+    padding-right: 0px;
+    border-right: none;
+}
+
 section{
     background-image: url(../images/background-image.png);
     background-size: cover;
-    background-position: 0 -219px;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -259,4 +297,71 @@ footer h3{
     content: "- ";
 
     display: inline;
+}
+
+@media (max-width:1065px){
+    .wrapper .content-wrapper, footer .wrapper{
+        flex-wrap: wrap
+    }
+    .quick-test, .customer-feedbacks{
+        width: 100%;
+    }
+
+    .content-wrapper .contact-us{
+        width: 60%;
+    }
+
+    .customer-feedbacks{
+        padding-top: 15px;
+    }
+}
+
+@media (max-width: 526px){
+    .content-wrapper .contact-us{
+        width: 100%;
+    }
+    
+    .lg{
+        display: none;
+    }
+
+    .sm{
+        display: inline-block;
+    }
+
+    .sm:hover .nav-sm{
+        display: inline-block;
+        animation-name: fade;
+        animation-duration: 0.5s;
+    }
+
+    .customer-feedbacks {
+        flex-wrap: wrap;
+    }
+
+    .customer-feedbacks div{
+        width: 100%;
+        padding-top: 6px;
+    }
+}
+
+@media (max-width: 360px){
+    .aviva-logo{
+        display: none;
+    }
+
+    .nav-sm{
+        width: 145px;
+    }
+}
+
+@keyframes fade{
+    from{
+        top:50%;
+        opacity: 0;
+    }
+    to{
+        top: 100%;
+        opacity: 1;
+    }
 }
