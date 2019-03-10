@@ -17,6 +17,8 @@ var clock = function(){
             greet_message += "morning";
         }
 
+        if(hour == 0) hour = 12;
+
         time_message = {
             hour: hour,
             minute: minute,
