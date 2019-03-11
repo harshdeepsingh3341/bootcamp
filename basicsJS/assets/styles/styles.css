@@ -1,0 +1,43 @@
+h1,h2,h3,h4,h5,h6{
+    font-weight: bold;
+}
+
+h1{
+    font-size: 80px;
+    text-transform: uppercase;
+}
+
+.page-wrapper{
+    width: 100%;
+    background-color: #0187c4;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.page-wrapper div, h1{
+    padding: 50px 0px;
+}
+
+#greet{
+    font-size: 50px;
+    position: relative;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+#greet:after{
+    position: absolute;
+    content:'';
+    width: 2%;
+    border: thick solid white;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#date{
+    font-size: 39px;
+    font-weight: lighter;
+    text-transform: capitalize;
+}
