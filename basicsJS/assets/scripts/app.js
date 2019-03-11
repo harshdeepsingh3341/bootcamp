@@ -9,7 +9,7 @@ var clock = function(){
 
     var time_message, date_message;
 
-    var months = ["","jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sept", "oct", "nov","dec"];
+    var months = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sept", "oct", "nov","dec"];
 
     if(hour<12){
 
