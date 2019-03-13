@@ -19,10 +19,10 @@ button{
     width: 100px;
 }
 
-#four{
+.four{
     text-overflow: ellipsis;
     overflow: hidden;
-    width: 100px;
+    width: 100px;   
     white-space: nowrap;
 }
 
