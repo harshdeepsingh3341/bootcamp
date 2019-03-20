@@ -3,8 +3,8 @@ import './header.css';
 
 class Header extends Component{
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             counter: 0
         }

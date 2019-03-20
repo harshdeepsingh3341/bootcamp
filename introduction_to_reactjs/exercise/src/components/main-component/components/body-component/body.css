@@ -1,0 +1,20 @@
+.body-component{
+    background-color: rgba(32,178,170,0.4);
+    flex-basis: 70%;
+}
+
+.body-component button{
+    line-height: 50px;
+    padding: 0 40px;
+    background-color: transparent;
+    border: 3px solid rgb(32,178,170);
+    border-radius: 4px;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.body-component button:active{
+    background-color: rgba(0,0,0,0.1);
+}

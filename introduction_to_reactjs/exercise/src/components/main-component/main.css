@@ -1,0 +1,16 @@
+.main-component{
+    display: flex;
+    height: 70%;
+}
+
+.main-component div{
+    height: 100%;
+}
+
+.main-component div p{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
