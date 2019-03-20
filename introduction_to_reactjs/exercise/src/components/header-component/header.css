@@ -1,0 +1,11 @@
+header{
+    background-color: rgba(255, 0, 0, 0.4);
+    /* flex-basis: 10%; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.counter{
+    font-size: 15px;
+    color: grey;
+}
