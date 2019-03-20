@@ -5,13 +5,10 @@ class Header extends Component{
 
     constructor(props) {
         super(props);
-        this.state = {
-            counter: 0
-        }
     }
 
     render(){
-        let {counter} = this.state;
+        let {counter} = this.props;
         return (
             <header>
                 <div>

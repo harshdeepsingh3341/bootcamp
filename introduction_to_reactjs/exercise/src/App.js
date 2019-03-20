@@ -5,15 +5,32 @@ import Main from "./components/main-component/Main";
 import Footer from './components/footer-component/Footer'
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-          <Header></Header>
-          <Main></Main>
-          <Footer></Footer>
-      </div>
-    );
+
+    constructor(props){
+        super(props);
+        this.state = {
+            counter: 0
+        }
+    }
+
+    updateCounter = () => {
+        this.setState({
+            counter: (this.state.counter+1)
+        });
+    };
+
+  render(){
+      console.log(this.state.counter);
+      
+      return(
+          <div className="App">
+              <Header counter={this.state.counter}/>
+              <Main updateCounter={this.updateCounter}/>
+              <Footer/>
+          </div>
+      );
   }
+
 }
 
 export default App;

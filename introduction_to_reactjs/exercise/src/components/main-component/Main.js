@@ -12,8 +12,8 @@ class Main extends Component{
     render(){
         return (
             <div className="main-component">
-                <Aside></Aside>
-                <Body></Body>
+                <Aside/>
+                <Body updateCounter={this.props.updateCounter}/>
             </div>
         )
     }

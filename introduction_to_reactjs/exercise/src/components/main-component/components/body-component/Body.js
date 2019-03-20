@@ -8,10 +8,11 @@ class Body extends Component{
     }
 
     render(){
+        let {updateCounter} = this.props;
         return (
             <div className='body-component'>
                 <p>BODY</p>
-                <button>Click me to increment the counter</button>
+                <button onClick={updateCounter}>Click me to increment the counter</button>
             </div>
         );
     }
