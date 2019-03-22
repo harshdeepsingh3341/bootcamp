@@ -13,9 +13,10 @@ class App extends Component {
         }
     }
 
-    updateCounter = () => {
+    updateCounter = (data = 'nothing') => {
         this.setState({
-            counter: ++this.state.counter
+            counter: ++this.state.counter,
+            data: data + " " + this.state.counter
         });
     };
 
@@ -24,7 +25,7 @@ class App extends Component {
       
       return(
           <div className="App">
-              <Header counter={this.state.counter}/>
+              <Header counter={this.state.counter} data={this.state.data}/>
               <Main updateCounter={this.updateCounter}/>
               <Footer/>
           </div>
