@@ -12,7 +12,7 @@ class Body extends Component{
         return (
             <div className='body-component'>
                 <p>BODY</p>
-                <button onClick={updateCounter}>Click me to increment the counter</button>
+                <button onClick={() => updateCounter('This is some data')}>Click me to increment the counter</button>
             </div>
         );
     }

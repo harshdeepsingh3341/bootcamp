@@ -13,9 +13,12 @@ class App extends Component {
         }
     }
 
-    updateCounter = () => {
+    updateCounter = (data = 'nothing') => {
         this.setState({
-            counter: ++this.state.counter
+            counter: ++this.state.counter,
+            data: data + " " + this.state.counter
+        }, () => {
+            console.log(`Set state is a async function, so we can use this callback for some tasks after the new set has been set. ${this.state.counter}`);
         });
     };
 
@@ -24,7 +27,7 @@ class App extends Component {
       
       return(
           <div className="App">
-              <Header counter={this.state.counter}/>
+              <Header counter={this.state.counter} data={this.state.data}/>
               <Main updateCounter={this.updateCounter}/>
               <Footer/>
           </div>

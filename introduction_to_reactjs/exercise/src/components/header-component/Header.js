@@ -8,14 +8,14 @@ class Header extends Component{
     }
 
     render(){
-        let {counter} = this.props;
+        let {counter, data} = this.props;
         return (
             <header>
                 <div>
                     HEADER COMPONENT
                 </div>
                 <div className="counter">
-                    counter: {counter}
+                    counter: {counter}, data: {data}
                 </div>
             </header>
         )
