@@ -1,0 +1,35 @@
+h2{
+    margin: 0;
+    padding: 20px 0;
+}
+
+form{
+    display: flex;
+    justify-content: space-around;
+}
+
+form input{
+    line-height: 40px;
+    border: thin solid #ccc;
+    padding: 0 4px;
+    border-radius: 5px;
+}
+
+form input[type="text"], form input[type="number"]{
+    flex-basis: 25%;
+}
+
+form input[type="button"]{
+    flex-basis: 20%;
+    border: 3px solid darkgreen;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    outline: none;
+    font-size: 19px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form input[type="button"]:active{
+    background-color: rgba(0, 0, 0, 0.5);
+}

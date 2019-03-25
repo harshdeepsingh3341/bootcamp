@@ -1,0 +1,52 @@
+ul{
+    margin: 0;
+    list-style: none;
+    padding: 0 40px;
+}
+
+ul li{
+    line-height: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5px solid grey;
+    align-items: center;
+}
+
+.placeholder{
+    padding: 0 10px;
+    font-size: 0.9em;
+    color: gray;
+    flex-basis: content;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.placeholder:after{
+    position: absolute;
+    content: ':';
+    padding: 0 5px;
+}
+
+li button{
+    text-transform: capitalize;
+    line-height: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    order: 1;
+
+}
+
+li button:active{
+    color: blue;
+    text-decoration: underline;
+}
+
+
+.more-details{
+    justify-content: space-between;
+    flex-basis: 40%;
+}
