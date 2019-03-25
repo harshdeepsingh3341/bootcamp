@@ -93,3 +93,5 @@ fabric.properties
 .idea/
 
 npm-debug.log
+
+node_modules/
