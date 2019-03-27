@@ -1,0 +1,10 @@
+.App{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    margin: 21px auto;
+    text-transform: capitalize;
+    width: 90%;
+}
