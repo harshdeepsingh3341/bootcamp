@@ -1,0 +1,14 @@
+.total-container{
+    width: 90%;
+    margin: auto;
+    background-color: dodgerblue;
+    line-height: 50px;
+    border: thin solid dodgerblue;
+    border-radius: 3px;
+    padding: 0 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
