@@ -1,0 +1,57 @@
+.books-list-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.link .book{
+    display: flex;
+    flex-flow: wrap column;
+    flex-basis: 30%;
+    border-radius: 10px;
+    background-color: #cccccc;
+    margin: 10px 0;
+    /*height: 400px;*/
+    padding-bottom: 35px;
+    cursor: pointer;
+    transition: 0.3s
+}
+
+.link .book:hover{
+    background-color: #939393;
+}
+
+.link .book .thumbnail{
+    display: flex;
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    border: none;
+}
+
+.link .book .thumbnail img{
+    width: 100%;
+    border: none;
+
+}
+
+.link .book .name, .author{
+    text-transform: capitalize;
+    padding: 0 20px;
+}
+
+.link .book .name{
+    font-size: 25px;
+    line-height: 79px;
+    font-weight: bold;
+}
+
+.author{
+    color: grey;
+    font-size: 15px;
+    font-style: italic;
+    text-align: right;
+    text-transform: capitalize;
+}

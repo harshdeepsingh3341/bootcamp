@@ -30,7 +30,7 @@
 .item-container .quantity-cost-container, .item-container .addition-deletion-container{
     display: flex;
     justify-content: space-between;
-    flex-basis: 7%;
+    flex-basis: 12%;
     align-items: center;
 }
 
