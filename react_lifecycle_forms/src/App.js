@@ -23,9 +23,10 @@ class App extends Component {
         let temp_items = this.state.items;
         let isNew = true;
         temp_items.every((element, index) => {
-           if(element.name === name || element.cost === cost){
+           if(element.name === name && element.cost === cost){
                temp_items[index].quantity++;
                isNew = false;
+
                return false;
            }
            else{
@@ -78,9 +79,9 @@ class App extends Component {
         return (
             <div className="App">
                 <h1>my cart</h1>
-                <AddItem addItemCallback={this.addItem}></AddItem>
-                <Cart items={this.state.items} addCallback={this.addQuantity} decreaseCallback={this.decreaseQuantity} deleteCallback={this.deleteItem}></Cart>
-                <Total items = {this.state.items}></Total>
+                <AddItem addItemCallback={this.addItem}/>
+                <Cart items={this.state.items} addCallback={this.addQuantity} decreaseCallback={this.decreaseQuantity} deleteCallback={this.deleteItem}/>
+                <Total items = {this.state.items}/>
             </div>
         );
     }
