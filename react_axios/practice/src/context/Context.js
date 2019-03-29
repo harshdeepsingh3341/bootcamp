@@ -1,14 +1,18 @@
 import React, {Component} from 'react';
 import Child from "./Child";
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import MyContext from './myContext'
 
 // const MyContext = React.createContext();
 
 export default class Context extends Component {
 
+    /*
+    CONTEXT -----> REACT 16 - (BEFORE 16)
+
     static childContextTypes = {
         data: PropTypes.object
-    };
+    };*/
     state = {
         data: {
             name: 'hd',
@@ -19,11 +23,14 @@ export default class Context extends Component {
         someMoreData: [1, 2, 4, 3, 4]
     };
 
+    /*
+    CONTEXT -----> REACT 16 - (BEFORE 16)
+
     getChildContext() {
         return {
             data: {...this.state.data}
         }
-    }
+    }*/
 
     render() {
         return (
@@ -37,9 +44,11 @@ export default class Context extends Component {
 
                 <h1>askdfnjsdlfkjjasdfjasjdfkj</h1>
 
-                {/*<MyContext.Provider value={this.state.data}/>*/}
+                <MyContext.Provider value={{data: {...this.state.data}}} >
 
                 <Child/>
+
+                </MyContext.Provider>
 
             </div>
 
