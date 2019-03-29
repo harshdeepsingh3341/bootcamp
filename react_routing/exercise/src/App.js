@@ -10,10 +10,9 @@ import BookDetails from "./components/book-details-component/BookDetails";
 
 class App extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state = {
-        };
+        this.state = {};
     }
 
     loginAuth = (isAuth) => {
@@ -47,7 +46,8 @@ class App extends Component {
                                             !this.state.isAuth ? (
                                                 <Link to={'/login'} style={{textDecoration: 'none'}}>log in</Link>
                                             ) : (
-                                                <Link to={'/all-books'} style={{textDecoration: 'none'}} onClick={this.logout}>log out</Link>
+                                                <Link to={'/all-books'} style={{textDecoration: 'none'}}
+                                                      onClick={this.logout}>log out</Link>
                                             )
                                         }
                                     </li>
@@ -62,7 +62,7 @@ class App extends Component {
 
                     <PrivateRoute path={'/all-books'} component={BooksList} isAuth={this.state.isAuth}/>
 
-                    <PrivateRoute path={'/book-details'} component={BookDetails} isAuth={this.state.isAuth}/>
+                    <PrivateRoute path={'/book-details/:index'} component={BookDetails} isAuth={this.state.isAuth}/>
 
                 </div>
             </Router>
@@ -72,8 +72,9 @@ class App extends Component {
 
 const PrivateRoute = ({component: Component, isAuth, ...rest}) => (
     <Route {...rest} render={(props) => (
-        (isAuth) ? (<Component {...props}/>) : <Redirect to={{pathname: '/login', state: {error: {isError: true, message: 'login first'}}}}/>
-    )} />
+        (isAuth) ? (<Component {...props}/>) :
+            <Redirect to={{pathname: '/login', state: {error: {isError: true, message: 'login first'}}}}/>
+    )}/>
 );
 
 export default App;
