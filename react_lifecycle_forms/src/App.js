@@ -20,10 +20,12 @@ class App extends Component {
 
     addItem = (item) => {
         let [name, cost] = item.split('-');
-        let temp_items = this.state.items;
+        let temp_items = [...this.state.items];
         let isNew = true;
         temp_items.every((element, index) => {
-           if(element.name === name && element.cost === cost){
+            console.log(element, name, cost);
+            
+           if(element.name === name && element.cost === parseInt(cost)){
                temp_items[index].quantity++;
                isNew = false;
 
@@ -43,7 +45,7 @@ class App extends Component {
     };
 
     addQuantity = (index) => {
-        let temp_items = this.state.items;
+        let temp_items = [...this.state.items];
         temp_items[index].quantity++;
 
         this.setState({
@@ -52,7 +54,7 @@ class App extends Component {
     };
 
     decreaseQuantity = (index) => {
-        let temp_items = this.state.items;
+        let temp_items = [...this.state.items];
 
         if(temp_items[index].quantity > 1) {
             temp_items[index].quantity--;
