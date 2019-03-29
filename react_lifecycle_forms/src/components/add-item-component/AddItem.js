@@ -14,8 +14,9 @@ class AddItem extends Component{
     }
 
     addNewItem = (event) => {
-        if(event.keyCode === 13 && !this.state.error.isError){
-            document.querySelector('.addItem button').click();
+        event.preventDefault();
+        if(!this.state.error.isError){
+            this.props.addItemCallback(this.state.item)
         }
     };
 
@@ -46,9 +47,16 @@ class AddItem extends Component{
         let {addItemCallback} = this.props;
         return (
             <div className="addItem">
-                <input type="text" name="addItem" id="addItem" placeholder='Enter item and price separated by a - (hyphen)' onKeyUp={this.addNewItem} onChange={this.handleChange} style={this.state.error.style}/>
-
-                <button onClick={() => addItemCallback(this.state.item)}/>
+                <form onSubmit={this.addNewItem}>
+                    <input
+                        type="text"
+                        name="addItem"
+                        id="addItem"
+                        placeholder='Enter item and price separated by a - (hyphen)'
+                        onChange={this.handleChange}
+                        style={this.state.error.style}
+                    />
+                </form>
             </div>
         )
     }
