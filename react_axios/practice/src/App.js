@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios'
 import './App.css';
+import Context from "./context/Context";
 
 class App extends Component {
 
@@ -50,6 +51,9 @@ class App extends Component {
 
     render() {
         let {posts, title, body} = this.state;
+
+        return (<Context/>);
+
         return (
             <div className="App">
 
