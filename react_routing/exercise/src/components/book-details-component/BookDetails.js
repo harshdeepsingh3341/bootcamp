@@ -1,17 +1,24 @@
 import React, {Component} from 'react';
 import './bookDetails.css';
 
+import Books from '../../books'
+
 class BookDetails extends Component{
 
     render() {
-        let {
-            name,
+        
+        console.log(this.props);
+        
+        
+        const {
+            name, 
+            thumbnail,
             author,
-            cost,
-            description,
             rating,
-            thumbnail
-        } = this.props.location.state.bookDetails;
+            cost,
+            description
+        } = Books.books[this.props.match.params.index]
+        
         console.log(this.props);
         return (
             <div className="book-details">
