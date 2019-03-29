@@ -67,8 +67,9 @@ class App extends Component {
     };
 
     deleteItem = (index) => {
-        let temp_items = this.state.items;
+        let temp_items = [...this.state.items];
         temp_items.splice(index, 1)
+        // this.forceUpdate();
         this.setState({
             items: temp_items
         })
@@ -79,9 +80,14 @@ class App extends Component {
         return (
             <div className="App">
                 <h1>my cart</h1>
-                <AddItem addItemCallback={this.addItem}/>
-                <Cart items={this.state.items} addCallback={this.addQuantity} decreaseCallback={this.decreaseQuantity} deleteCallback={this.deleteItem}/>
-                <Total items = {this.state.items}/>
+                <AddItem addItemCallback={this.addItem} />
+                <Cart
+                    items={this.state.items}
+                    addCallback={this.addQuantity}
+                    decreaseCallback={this.decreaseQuantity}
+                    deleteCallback={this.deleteItem}
+                />
+                <Total items={this.state.items} />
             </div>
         );
     }

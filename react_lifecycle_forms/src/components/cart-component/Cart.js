@@ -49,15 +49,15 @@ const Item = (props) => {
 
             <div className="addition-deletion-container">
                 <span className='button' onClick={() => addCallback(index)}>
-                    <i className="fas fa-plus"></i>
+                    <i className="fas fa-plus"/>
                 </span>
                 <span className='button' onClick={() => decreaseCallback(index)}>
-                    <i className="fas fa-minus"></i>
+                    <i className="fas fa-minus"/>
                 </span>
             </div>
 
             <span className='button' onClick={() => deleteCallback(index)}>
-                <i className="far fa-times-circle"></i>
+                <i className="far fa-times-circle"/>
             </span>
 
         </div>
