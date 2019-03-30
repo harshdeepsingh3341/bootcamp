@@ -1,0 +1,6 @@
+.header{
+    display: flex;
+    line-height: 70px;
+    justify-content: space-around;
+    background-color: rgba(0, 255, 0, 0.4);
+}
