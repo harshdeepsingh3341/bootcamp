@@ -19,10 +19,10 @@ export default class HomeCarousel extends Component {
             >
                 {
                     carouselImages.map((element, index) => (
-                        <Carousel.Item key={index+1}>
+                        <Carousel.Item key={index + 1}>
                             <Image
                                 src={element}
-                                alt={`Carousel Image ${index+1}`}
+                                alt={`Carousel Image ${index + 1}`}
                             />
                         </Carousel.Item>
                     ))
