@@ -9,7 +9,8 @@ class AddItem extends Component{
             error: {
                 isError: false,
                 style: {border:'thin solid #ccc'}
-            }
+            },
+            extraClass: 'extra'
         };
     }
 
@@ -46,7 +47,7 @@ class AddItem extends Component{
     render(){
         let {addItemCallback} = this.props;
         return (
-            <div className="addItem">
+            <div className={this.state.extraClass + ' addItem'}>
                 <form onSubmit={this.addNewItem}>
                     <input
                         type="text"
