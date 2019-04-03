@@ -13,12 +13,11 @@ class Total extends Component {
     };
 
     render() {
-        let {items}= this.state;
-        let total = items.reduce((accumulator, element) => accumulator += element.quantity*element.cost, 0)
-        return (
+        let {total}= this.state;
+         return (
             <div className="total-container">
                 <span>Total</span>
-                <span>{total}</span>
+                <span>&#x20B9; {total}</span>
             </div>
         );
     }
