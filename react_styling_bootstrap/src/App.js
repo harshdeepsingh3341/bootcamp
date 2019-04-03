@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import './App.css';
 import HeaderComponent from "./components/HeaderComponent";
 import HomeCarousel from "./components/HomeCarousel";
+import TopDealsComponent from "./components/TopDealsComponent";
+import TopBrandsComponent from "./components/TopBrandsComponent";
 
 class App extends Component {
     render() {
@@ -9,6 +11,8 @@ class App extends Component {
             <div className="App">
                 <HeaderComponent/>
                 <HomeCarousel/>
+                <TopDealsComponent/>
+                <TopBrandsComponent/>
 
             </div>
         );

@@ -1,5 +1,10 @@
 import React, {Component} from 'react';
-import {Bag, H1, Header, LogoWrapper, NavList, Profile, SearchContainer, UserNavList, Wishlist} from './styles';
+import {H1, Header, LogoWrapper} from './styles';
+
+import NavListComponent from '../NavListComponent';
+
+import SearchComponent from '../SearchComponent'
+import UserActionNavComponent from "../UserActionNavComponent";
 
 export default class HeaderComponent extends Component {
 
@@ -12,36 +17,12 @@ export default class HeaderComponent extends Component {
                     </H1>
                 </LogoWrapper>
 
-                <NavList>
-                    <div>men</div>
-                    <div>women</div>
-                    <div>kids</div>
-                    <div>home & living</div>
-                    <div>discover</div>
-                </NavList>
+                <NavListComponent/>
 
-                <SearchContainer>
-                    <span className={'search-image'}/>
-                    <input type="search" name="search" placeholder={'Search for products, brands and more'}/>
-                </SearchContainer>
+                <SearchComponent/>
 
-                <UserNavList>
-                    <Profile>
-                        <span className={'image'}/>
-                        <span>Profile</span>
-                    </Profile>
+                <UserActionNavComponent/>
 
-                    <Wishlist>
-                        <span className="image"/>
-                        <span>Wishlist</span>
-                    </Wishlist>
-
-                    <Bag>
-                        <span className="image"/>
-                        <span>Bag</span>
-                    </Bag>
-
-                </UserNavList>
 
             </Header>
         )

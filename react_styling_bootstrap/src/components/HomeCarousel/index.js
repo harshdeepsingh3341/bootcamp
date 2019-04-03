@@ -12,7 +12,7 @@ export default class HomeCarousel extends Component {
 
         return (
             <Carousel
-                style={{padding: '10px 0'}}
+                style={{padding: '14px 0'}}
                 fade={true}
                 interval={3000}
                 controls={false}
