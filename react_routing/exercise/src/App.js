@@ -3,9 +3,8 @@ import './App.css';
 import Login from "./components/login-component/Login";
 
 
-import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Link, Redirect, Route, Switch} from 'react-router-dom';
 import BooksList from "./components/books-list-component/BooksList";
-import {Redirect} from "react-router";
 import BookDetails from "./components/book-details-component/BookDetails";
 
 class App extends Component {
@@ -31,6 +30,7 @@ class App extends Component {
         return (
             <Router>
                 <div className="App">
+
                     <Route path={'/'} render={(props) => {
 
                         return (<div className="header-container">
@@ -57,12 +57,17 @@ class App extends Component {
                         )
                     }
                     }/>
+                    <Switch>
+                        <Route exact path={'/login'} render={(props) => <Login {...props} loginCallback={this.loginAuth}/>}/>
 
-                    <Route path={'/login'} render={(props) => <Login {...props} loginCallback={this.loginAuth}/>}/>
+                        <PrivateRoute exact path={'/all-books'} component={BooksList} isAuth={this.state.isAuth}/>
 
-                    <PrivateRoute path={'/all-books'} component={BooksList} isAuth={this.state.isAuth}/>
+                        <PrivateRoute exact path={'/book-details/:index'} component={BookDetails} isAuth={this.state.isAuth}/>
 
-                    <PrivateRoute path={'/book-details/:index'} component={BookDetails} isAuth={this.state.isAuth}/>
+                        <Route
+                            render={() => <div>404 not found</div>}
+                        />
+                    </Switch>
 
                 </div>
             </Router>
