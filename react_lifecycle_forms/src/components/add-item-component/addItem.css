@@ -1,7 +1,12 @@
 .addItem{
     width: 90%;
     margin: auto;
+    background-color: dodgerblue;
+}
 
+.extra{
+    padding: 10px;
+    border: thick solid red;
 }
 
 .addItem input{
