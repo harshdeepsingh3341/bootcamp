@@ -13,7 +13,8 @@ class Main extends Component{
         return (
             <div className="main-component">
                 <Aside/>
-                <Body updateCounter={this.props.updateCounter}/>
+                {/*<Body updateCounter={this.props.updateCounter}/>*/}
+                <Body countPromise={this.props.countPromise} />
             </div>
         )
     }
