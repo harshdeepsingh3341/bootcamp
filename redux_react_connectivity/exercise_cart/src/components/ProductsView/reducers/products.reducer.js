@@ -17,6 +17,7 @@ export default (state = initialState.products, action) => {
                 return element;
             });
         }
+
         case ADD_PRODUCT_QUANTITY: {
             return state.map(element => {
                 if (element.id === action.data.id) {
@@ -38,12 +39,11 @@ export default (state = initialState.products, action) => {
         case DELETE_PRODUCT_FROM_CART: {
             console.log("Product reducer DELETE_PRODUCT_FROM_CART ", action);
             return state.map(element => {
-                if(element.id === action.data.id){
+                if (element.id === action.data.id) {
                     element.quantity += action.data.cartQuantity;
                 }
                 return element;
-            })
-
+            });
         }
 
         default:

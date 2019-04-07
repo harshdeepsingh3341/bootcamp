@@ -10,7 +10,7 @@ class ProductsView extends Component {
 
     render() {
         const {products} = this.props;
-        console.log(this.props, products);
+        console.log("ProductsView index.js", this.props, products);
 
         return (
             <Products>
@@ -33,6 +33,6 @@ class ProductsView extends Component {
 
 }
 
-const mapStateToProps = (state) => state;
+const mapStateToProps = (state) => ({products: state.products});
 
 export default connect(mapStateToProps)(ProductsView);

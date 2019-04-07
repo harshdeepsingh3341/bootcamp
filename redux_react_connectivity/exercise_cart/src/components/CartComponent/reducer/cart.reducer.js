@@ -20,9 +20,10 @@ export default (state = initialState.cart, action) => {
                 } else {
                     temp_products[existingProductIndex].disableAddProductQuantity = false;
                     temp_products[existingProductIndex].quantity++;
+                    if (temp_products[existingProductIndex].quantity === temp_products[existingProductIndex].inStock) {
+                        temp_products[existingProductIndex].disableAddProductQuantity = true;
+                    }
                 }
-
-
             } else {
                 temp_products.push({
                     id: id,
