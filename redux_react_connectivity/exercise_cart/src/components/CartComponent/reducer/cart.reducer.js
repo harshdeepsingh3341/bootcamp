@@ -25,7 +25,9 @@ export default (state = initialState.cart, action) => {
                     }
                 }
             } else {
-                temp_products.push({
+                console.log(quantity, name);
+
+                /*temp_products.push({
                     id: id,
                     name: name,
                     price: price,
@@ -33,6 +35,22 @@ export default (state = initialState.cart, action) => {
                     inStock: quantity + 1,
                     disableAddProductQuantity: false
                 });
+
+                HERE THE QUANTITY IS GETTING UPDATED FROM PRODUCT.REDUCER.JS
+                IN PRODUCT.REDUCER.JS I AM UPDATING THE QUANTITY,
+                THEN I AM IMPORTING AGAIN FROM JSON, AND THERE THE QUANTITY/NAME IS UPDATED WHY SO? WHY THE QUANTITY/NAME IS GETTING UPDATED IN THE JSON
+
+                */
+
+                temp_products.push({
+                    id: id,
+                    name: name,
+                    price: price,
+                    quantity: 1,
+                    inStock: quantity,
+                    disableAddProductQuantity: false
+                });
+
             }
             return {
                 ...state,
