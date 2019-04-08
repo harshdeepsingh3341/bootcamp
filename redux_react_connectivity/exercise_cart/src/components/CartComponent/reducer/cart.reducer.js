@@ -16,45 +16,83 @@ export default (state = initialState.cart, action) => {
             const existingProductIndex = temp_products.findIndex(element => element.id === action.data.id);
             if (existingProductIndex !== -1) {
                 if (temp_products[existingProductIndex].quantity === temp_products[existingProductIndex].inStock) {
-                    temp_products[existingProductIndex].disableAddProductQuantity = true;
-                } else {
-                    temp_products[existingProductIndex].disableAddProductQuantity = false;
-                    temp_products[existingProductIndex].quantity++;
-                    if (temp_products[existingProductIndex].quantity === temp_products[existingProductIndex].inStock) {
-                        temp_products[existingProductIndex].disableAddProductQuantity = true;
+                    return {
+                        ...state,
+                        products: [
+                            ...temp_products.slice(0, existingProductIndex),
+                            {
+                                ...temp_products[existingProductIndex],
+                                disableAddProductQuantity: true
+                            },
+                            ...temp_products.slice(existingProductIndex + 1)
+                        ],
+                        total: state.total + price,
+                    };
+                }
+
+                if (temp_products[existingProductIndex].quantity + 1 === temp_products[existingProductIndex].inStock) {
+                    return {
+                        ...state,
+                        products: [
+                            ...temp_products.slice(0, existingProductIndex),
+                            {
+                                ...temp_products[existingProductIndex],
+                                quantity: temp_products[existingProductIndex].quantity + 1,
+                                disableAddProductQuantity: true
+                            },
+                            ...temp_products.slice(existingProductIndex + 1)
+                        ],
+                        total: state.total + price,
+
                     }
                 }
-            } else {
-                console.log(quantity, name);
+                return {
+                    ...state,
+                    products: [
+                        ...temp_products.slice(0, existingProductIndex),
+                        {
+                            ...temp_products[existingProductIndex],
+                            quantity: temp_products[existingProductIndex].quantity + 1,
+                            disableAddProductQuantity: false
+                        },
+                        ...temp_products.slice(existingProductIndex + 1)
+                    ],
+                    total: state.total + price,
 
-                /*temp_products.push({
-                    id: id,
-                    name: name,
-                    price: price,
-                    quantity: 1,
-                    inStock: quantity + 1,
-                    disableAddProductQuantity: false
-                });
-
-                HERE THE QUANTITY IS GETTING UPDATED FROM PRODUCT.REDUCER.JS
-                IN PRODUCT.REDUCER.JS I AM UPDATING THE QUANTITY,
-                THEN I AM IMPORTING AGAIN FROM JSON, AND THERE THE QUANTITY/NAME IS UPDATED WHY SO? WHY THE QUANTITY/NAME IS GETTING UPDATED IN THE JSON
-
-                */
-
-                temp_products.push({
-                    id: id,
-                    name: name,
-                    price: price,
-                    quantity: 1,
-                    inStock: quantity,
-                    disableAddProductQuantity: false
-                });
-
+                }
             }
+
+            console.log(quantity, name);
+
+            /*temp_products.push({
+                id: id,
+                name: name,
+                price: price,
+                quantity: 1,
+                inStock: quantity + 1,
+                disableAddProductQuantity: false
+            });
+
+            HERE THE QUANTITY IS GETTING UPDATED FROM PRODUCT.REDUCER.JS
+            IN PRODUCT.REDUCER.JS I AM UPDATING THE QUANTITY,
+            THEN I AM IMPORTING AGAIN FROM JSON, AND THERE THE QUANTITY/NAME IS UPDATED WHY SO? WHY THE QUANTITY/NAME IS GETTING UPDATED IN THE JSON
+
+            */
+
+
             return {
                 ...state,
-                products: temp_products,
+                products: [
+                    ...temp_products,
+                    {
+                        id: id,
+                        name: name,
+                        price: price,
+                        quantity: 1,
+                        inStock: quantity,
+                        disableAddProductQuantity: false
+                    }
+                ],
                 total: state.total + price,
             };
         }
@@ -62,40 +100,66 @@ export default (state = initialState.cart, action) => {
         case ADD_PRODUCT_QUANTITY: {
             const temp_products = [...state.products];
             const productIndex = temp_products.findIndex(element => element.id === action.data.id);
-
-            let disableAddQuantity = false;
             if (temp_products[productIndex].quantity === temp_products[productIndex].inStock) {
-                temp_products[productIndex].disableAddProductQuantity = true;
-            } else {
-                temp_products[productIndex].quantity++;
-                if (temp_products[productIndex].quantity === temp_products[productIndex].inStock) {
-                    temp_products[productIndex].disableAddProductQuantity = true;
-                } else {
-                    temp_products[productIndex].disableAddProductQuantity = false;
+                return {
+                    ...state,
+                    products: [
+                        ...temp_products.slice(0, productIndex),
+                        {
+                            ...temp_products[productIndex],
+                            disableAddProductQuantity: true
+                        },
+                        ...temp_products.slice(productIndex + 1)
+                    ]
                 }
-
             }
-
-            console.log(temp_products[productIndex].inStock, temp_products[productIndex].quantity);
-
+            if (temp_products[productIndex].quantity + 1 === temp_products[productIndex].inStock) {
+                return {
+                    ...state,
+                    products: [
+                        ...temp_products.slice(0, productIndex),
+                        {
+                            ...temp_products[productIndex],
+                            quantity: temp_products[productIndex].quantity + 1,
+                            disableAddProductQuantity: true
+                        },
+                        ...temp_products.slice(productIndex + 1)
+                    ],
+                    total: state.total + temp_products[productIndex].price,
+                }
+            }
             return {
                 ...state,
-                products: temp_products,
+                products: [
+                    ...temp_products.slice(0, productIndex),
+                    {
+                        ...temp_products[productIndex],
+                        quantity: temp_products[productIndex].quantity + 1,
+                        disableAddProductQuantity: false
+                    },
+                    ...temp_products.slice(productIndex + 1)
+                ],
                 total: state.total + temp_products[productIndex].price,
-            }
+            };
         }
 
         case REMOVE_PRODUCT_QUANTITY: {
             const temp_products = [...state.products];
             const productIndex = temp_products.findIndex(element => element.id === action.data.id);
-            temp_products[productIndex].quantity--;
-            temp_products[productIndex].disableAddProductQuantity = false;
 
             return {
                 ...state,
-                products: temp_products,
-                total: state.total - temp_products[productIndex].price
-            }
+                products: [
+                    ...temp_products.slice(0, productIndex),
+                    {
+                        ...temp_products[productIndex],
+                        quantity: temp_products[productIndex].quantity - 1,
+                        disableAddProductQuantity: false
+                    },
+                    ...temp_products.slice(productIndex + 1)
+                ],
+                total: state.total - temp_products[productIndex].price,
+            };
         }
 
         case DELETE_PRODUCT_FROM_CART: {
