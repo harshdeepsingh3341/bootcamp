@@ -14,11 +14,13 @@ export default (state = initialState.products, action) => {
         case ADD_PRODUCT_TO_CART: {
             const temp_state = [...state];
             return temp_state.map(element => {
-                const temp_element = {...element};
-                if (temp_element.id === action.data.id) {
-                    temp_element.quantity--;
+                if (element.id === action.data.id) {
+                    return {
+                        ...element,
+                        quantity: element.quantity - 1
+                    }
                 }
-                return temp_element;
+                return element;
             });
 
             /*
@@ -31,11 +33,13 @@ export default (state = initialState.products, action) => {
             const temp_state = [...state];
 
             return temp_state.map(element => {
-                const temp_element = {...element};
-                if (temp_element.id === action.data.id) {
-                    temp_element.quantity--;
+                if (element.id === action.data.id) {
+                    return {
+                        ...element,
+                        quantity: element.quantity - 1
+                    }
                 }
-                return temp_element;
+                return element;
             });
         }
 
@@ -43,11 +47,13 @@ export default (state = initialState.products, action) => {
             const temp_state = [...state];
 
             return temp_state.map(element => {
-                const temp_element = {...element};
-                if (temp_element.id === action.data.id) {
-                    temp_element.quantity++;
+                if (element.id === action.data.id) {
+                    return {
+                        ...element,
+                        quantity: element.quantity + 1
+                    }
                 }
-                return temp_element;
+                return element;
             });
         }
 
@@ -56,16 +62,17 @@ export default (state = initialState.products, action) => {
             const temp_state = [...state];
 
             return temp_state.map(element => {
-                const temp_element = {...element};
-                if (temp_element.id === action.data.id) {
-                    temp_element.quantity += action.data.cartQuantity;
+                if (element.id === action.data.id) {
+                    return {
+                        ...element,
+                        quantity: element.quantity + action.data.cartQuantity
+                    }
                 }
-                return temp_element;
+                return element;
             });
         }
 
         default:
             return state
-
     }
 }
