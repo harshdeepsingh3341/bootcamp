@@ -1,6 +1,6 @@
 import {combineReducers, createStore} from 'redux'
-import products from '../components/ProductsView/reducers/products.reducer';
-import cart from '../components/CartComponent/reducer/cart.reducer'
+import products from '../components/ProductsView/products.reducer';
+import cart from '../components/CartComponent/cart.reducer'
 
 const reducers = combineReducers({
     products: products,

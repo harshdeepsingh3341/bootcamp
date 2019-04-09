@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import {Products} from "./styles";
 import Product from '../ProductComponent'
-import {selectProductForCart} from "./actions/products.action";
+import {selectProductForCart} from "./products.action";
 
 class ProductsView extends Component {
 
