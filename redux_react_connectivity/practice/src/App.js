@@ -1,18 +1,17 @@
 import React, {Component} from 'react';
 import './App.css';
-import {Provider} from 'react-redux';
-import store from './redux/store'
+
+import ProductsComponent from "./components/ProductsComponent";
 
 class App extends Component {
     render() {
         return (
-            <Provider
-                store={store}
-            >
-                <div className="App">
-                    test
-                </div>
-            </Provider>
+
+            <div className="App">
+                <ProductsComponent/>
+            </div>
+
+
         );
     }
 }
