@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ListContainer = styled.div`
+const Styled_ListContainer = styled.div`
 width: 95%;
 margin: auto;
 display: flex;
@@ -8,7 +8,7 @@ justify-content: center;
 flex-wrap: wrap;
 `;
 
-const ToDoItem = styled.div`
+const Styled_ToDoItem = styled.div`
 flex-basis: 90%;
 background-color: lightskyblue;
 border: thin solid #74bbe6;
@@ -24,9 +24,10 @@ box-shadow: 0px 0px 0.5px 0px rgba(0,0,0,0.75);
 margin-bottom: 14px;
 align-items: center;
 justify-content: space-between;
+order: ${({isChecked}) => isChecked ? 1 : 0} 
 `;
 
-const AddItemContainer = styled.div`
+const Styled_AddItemContainer = styled.div`
 flex-basis: 95%;
 background-color: lightgrey;
 display: flex;
@@ -37,7 +38,7 @@ border-radius: 4px;
 margin-bottom: 17px;
 `;
 
-const ToDoItemInput = styled.textarea`
+const Styled_ToDoItemInput = styled.textarea`
 flex-basis: 85%;
 background-color: #eeeeee;
 line-height: 18px;
@@ -50,7 +51,7 @@ border-radius: 4px;
 outline: none;
 `;
 
-const AddButton = styled.button`
+const Styled_AddButton = styled.button`
 color: #ffffff;
 background-color: firebrick;
 line-height: 33px;
@@ -65,26 +66,40 @@ outline: none;
 cursor: pointer;
 `;
 
-const ToDoData = styled.p`
+const Styled_ToDoData = styled.p`
 margin: 0;
 line-height: 24px;
 white-space: pre-wrap;
 word-break: break-all;
-flex-basis: 90%;
+flex-basis: 85%;
 text-decoration: ${props => (props.isChecked ? 'line-through' : 'none')} ;
 `;
 
-const EditSaveButton = styled(AddButton)`
-flex-basis: 7%;
+const Styled_ButtonsWrapper = styled.div`
+flex-basis: 10%;
 visibility: ${props => props.isChecked ? 'hidden' : 'auto'}; 
+display: flex;
+flex-wrap: wrap;
+`;
+
+const Styled_EditSaveButton = styled(Styled_AddButton)`
+flex-basis: 100%;
+margin: 6px 0;
+`;
+
+const Styled_DeleteButton = styled(Styled_EditSaveButton)`
+flex-basis: 100%;
+margin: 6px 0;
 `;
 
 export {
-    ListContainer,
-    ToDoItem,
-    AddItemContainer,
-    ToDoItemInput,
-    AddButton,
-    ToDoData,
-    EditSaveButton
+    Styled_ListContainer,
+    Styled_ToDoItem,
+    Styled_AddItemContainer,
+    Styled_ToDoItemInput,
+    Styled_AddButton,
+    Styled_ToDoData,
+    Styled_EditSaveButton,
+    Styled_DeleteButton,
+    Styled_ButtonsWrapper
 };

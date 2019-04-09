@@ -1,10 +1,20 @@
 import React, {Component, useState} from 'react';
-import {AddButton, AddItemContainer, EditSaveButton, ListContainer, ToDoData, ToDoItem, ToDoItemInput} from "./styles";
+import {
+    Styled_AddButton,
+    Styled_AddItemContainer,
+    Styled_ButtonsWrapper,
+    Styled_DeleteButton,
+    Styled_EditSaveButton,
+    Styled_ListContainer,
+    Styled_ToDoData,
+    Styled_ToDoItem,
+    Styled_ToDoItemInput
+} from "./styles";
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faCheckSquare, faEdit, faPlusSquare, faSave, faSquare} from '@fortawesome/free-solid-svg-icons'
+import {faCheckSquare, faEdit, faPlusSquare, faSave, faSquare, faTrash} from '@fortawesome/free-solid-svg-icons'
 
-library.add(faPlusSquare, faSquare, faCheckSquare, faEdit, faSave);
+library.add(faPlusSquare, faSquare, faCheckSquare, faEdit, faSave, faTrash);
 
 export default class ToDoList extends Component {
 
@@ -23,6 +33,7 @@ export default class ToDoList extends Component {
 
         ]
     };
+    const
 
     addToDoItem = (item) => {
 
@@ -32,7 +43,7 @@ export default class ToDoList extends Component {
                     {
                         toDo: item,
                         isChecked: false,
-                        id: (this.state.items.length + 1)
+                        id: Math.floor(Math.random() * 1000000)
                     }
                 ]
             }, () => console.log(this.state)
@@ -57,7 +68,7 @@ export default class ToDoList extends Component {
     saveEdits = (editedToDo, id) => {
         let temp = {...this.state};
         temp.items.every((element, index) => {
-            if(element.id === id) {
+            if (element.id === id) {
                 element.toDo = editedToDo;
                 return false;
             }
@@ -68,31 +79,43 @@ export default class ToDoList extends Component {
         })
     };
 
+    delete = (id) => {
+        const toDoIndex = this.state.items.findIndex(element => element.id === id);
+        this.setState({
+            items: [
+                ...this.state.items.slice(0, toDoIndex),
+                ...this.state.items.slice(toDoIndex + 1)
+            ]
+        })
+    };
+
+
     render() {
         const {items} = this.state;
+        const toDoItems = items.map((element) =>
+            <ToDo
+                key={element.id}
+                {...element}
+                length={items.length}
+                checkCallback={this.checked}
+                saveCallback={this.saveEdits}
+                deleteCallback={this.delete}
+            />);
         return (
-            <ListContainer>
+            <Styled_ListContainer>
                 <AddItem
                     addItemCallback={this.addToDoItem}
                 />
                 {
-                    items.map((element) =>
-                        <ToDo
-                            key={element.id}
-                            {...element}
-                            length={items.length}
-                            checkCallback={this.checked}
-                            saveCallback={this.saveEdits}
-                        />)
+                    toDoItems
                 }
-            </ListContainer>
+            </Styled_ListContainer>
         );
     }
 
 }
 
-const AddItem = (props) => {
-    const {addItemCallback} = props;
+const AddItem = ({addItemCallback}) => {
     const [input, setInput] = useState({add: ''});
 
     const handleChange = (event) => {
@@ -104,8 +127,8 @@ const AddItem = (props) => {
     };
 
     return (
-        <AddItemContainer>
-            <ToDoItemInput
+        <Styled_AddItemContainer>
+            <Styled_ToDoItemInput
                 type='text'
                 placeholder={'Add To Do'}
                 rows='5'
@@ -113,7 +136,7 @@ const AddItem = (props) => {
                 onChange={handleChange}
                 value={input.add}
             />
-            <AddButton
+            <Styled_AddButton
                 onClick={
                     () => {
                         if (input.add.length != 0) {
@@ -127,101 +150,125 @@ const AddItem = (props) => {
             >
                 <FontAwesomeIcon icon="plus-square"/>
                 <span>Add</span>
-            </AddButton>
-        </AddItemContainer>
+            </Styled_AddButton>
+        </Styled_AddItemContainer>
     )
 };
 
-const ToDo = (props) => {
-    const {length, toDo, id, isChecked, checkCallback, saveCallback} = props;
+const ToDo = ({length, toDo, id, isChecked, checkCallback, saveCallback, deleteCallback}) => {
 
     const [isSave, setIsSave] = useState(false);
     const [editedToDo, setEditedToDo] = useState(toDo);
 
-    let edit = () => {
+    const edit = () => {
         setIsSave(true);
         console.log(isSave);
-        
+
     };
 
-    let save = () => {
+    const save = () => {
         setIsSave(false);
         saveCallback(editedToDo, id);
     };
 
-    let handleChange = (event) => {
+    const handleChange = (event) => {
         setEditedToDo(event.target.value);
-    }
+    };
+
+    const faIcon = (isChecked) ? (
+        <FontAwesomeIcon
+            icon="check-square"
+            style={{color: 'white', cursor: 'pointer'}}
+            onClick={() => {
+                setIsSave(false);
+                checkCallback(!isChecked, id)
+            }}
+
+        />
+    ) : (
+        <FontAwesomeIcon
+            icon="square"
+            style={{color: 'white', cursor: 'pointer'}}
+            onClick={() => {
+                setIsSave(false);
+                checkCallback(!isChecked, id)
+            }}
+        />
+    );
+
+    const saveInput = isSave ?
+        (
+            <Styled_ToDoItemInput
+                type='text'
+                placeholder={'Add To Do'}
+                rows='5'
+                name={'add'}
+                onChange={handleChange}
+                value={editedToDo}
+            />
+        ) : (
+            <Styled_ToDoData
+                isChecked={isChecked}
+            >
+                {toDo}
+            </Styled_ToDoData>
+        );
+
+    const editSaveButton = isSave ?
+        (
+            <React.Fragment>
+                <FontAwesomeIcon
+                    icon={'save'}
+                />
+                Save
+            </React.Fragment>
+        )
+        :
+        (
+            <React.Fragment>
+                <FontAwesomeIcon
+                    icon={'edit'}
+                />
+                Edit
+            </React.Fragment>
+        );
+
 
     return (
-        <ToDoItem
+        <Styled_ToDoItem
             length={length}
+            isChecked={isChecked}
         >
             {
-                (isChecked) ? (
-                    <FontAwesomeIcon
-                        icon="check-square"
-                        style={{color: 'white', cursor: 'pointer'}}
-                        onClick={() => {
-                            setIsSave(false);
-                            checkCallback(!isChecked, id)
-                        }}
-
-                    />
-                ) : (
-                    <FontAwesomeIcon
-                        icon="square"
-                        style={{color: 'white', cursor: 'pointer'}}
-                        onClick={() => {
-                            setIsSave(false);
-                            checkCallback(!isChecked, id)
-                        }}
-                    />
-                )
+                faIcon
             }
 
             {
-                isSave ?
-                    (
-                        <ToDoItemInput
-                            type='text'
-                            placeholder={'Add To Do'}
-                            rows='5'
-                            name={'add'}
-                            onChange={handleChange}
-                            value={editedToDo}
-                        />
-                    ) : (
-                        <ToDoData
-                            isChecked={isChecked}
-                        >
-                            {toDo}
-                        </ToDoData>
-                    )
+                saveInput
             }
 
-
-            <EditSaveButton
+            <Styled_ButtonsWrapper
                 isChecked={isChecked}
-                onClick={isSave ? save : edit}
             >
-                {
-                    isSave ?
-                        <FontAwesomeIcon
-                            icon={'save'}
-                        /> :
-                        <FontAwesomeIcon
-                            icon={'edit'}
-                        />
-                }
+                <Styled_EditSaveButton
+                    onClick={isSave ? save : edit}
+                >
+                    {
+                        editSaveButton
+                    }
+                </Styled_EditSaveButton>
 
-                {
-                    isSave ?
-                        'Save' :
-                        'Edit'
-                }
-            </EditSaveButton>
+                <Styled_DeleteButton
+                    onClick={() => deleteCallback(id)}
+                >
+                    <FontAwesomeIcon
+                        icon={'trash'}
+                    />
+                    Delete
+                </Styled_DeleteButton>
+            </Styled_ButtonsWrapper>
 
-        </ToDoItem>
+
+        </Styled_ToDoItem>
     );
 };
