@@ -1,4 +1,4 @@
-import {ADD_PRODUCT_TO_CART} from "./actionTypes";
+import {ADD_PRODUCT_TO_CART} from "../../constants";
 
 export const selectProductForCart = id => (
     {

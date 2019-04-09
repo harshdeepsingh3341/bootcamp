@@ -1,7 +1,6 @@
-import initialState from '../state/cart.state'
-import {products} from '../../../products';
-import {ADD_PRODUCT_QUANTITY, DELETE_PRODUCT_FROM_CART, REMOVE_PRODUCT_QUANTITY} from "../actions/actionTypes";
-import {ADD_PRODUCT_TO_CART} from "../../ProductsView/actions/actionTypes";
+import initialState from './cart.state'
+import {products} from '../../products';
+import {ADD_PRODUCT_QUANTITY, DELETE_PRODUCT_FROM_CART, REMOVE_PRODUCT_QUANTITY, ADD_PRODUCT_TO_CART} from "../../constants";
 
 export default (state = initialState.cart, action) => {
     console.log('cart reducer');

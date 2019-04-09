@@ -1,10 +1,10 @@
-import initialState from '../state/products.state'
-import {ADD_PRODUCT_TO_CART} from "../actions/actionTypes";
+import initialState from './products.state'
 import {
     ADD_PRODUCT_QUANTITY,
     DELETE_PRODUCT_FROM_CART,
-    REMOVE_PRODUCT_QUANTITY
-} from "../../CartComponent/actions/actionTypes";
+    REMOVE_PRODUCT_QUANTITY,
+    ADD_PRODUCT_TO_CART
+} from "../../constants";
 
 export default (state = initialState.products, action) => {
     console.log(state);
