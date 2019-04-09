@@ -1,4 +1,4 @@
-import {ADD_PRODUCT_QUANTITY, DELETE_PRODUCT_FROM_CART, REMOVE_PRODUCT_QUANTITY} from "./actionTypes";
+import {ADD_PRODUCT_QUANTITY, DELETE_PRODUCT_FROM_CART, REMOVE_PRODUCT_QUANTITY} from "../../constants";
 
 export const addProductQuantity = (id) => (
     {

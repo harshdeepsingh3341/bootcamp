@@ -3,7 +3,7 @@ import {Cart, Heading} from './styles';
 import CartProducts from '../CartProducts';
 import CartTotal from '../CartTotal';
 import {connect} from 'react-redux'
-import {addProductQuantity, deleteProduct, removeProductQuantity} from "./actions/cart.action";
+import {addProductQuantity, deleteProduct, removeProductQuantity} from "./cart.action";
 
 class CartComponent extends Component {
 
