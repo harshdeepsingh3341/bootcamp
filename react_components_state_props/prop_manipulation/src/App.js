@@ -9,21 +9,18 @@ class App extends Component {
     constructor(props) {
         super(props);
 
-        localStorage.setItem('dishes', JSON.stringify( [
+        /*localStorage.setItem('dishes', JSON.stringify( [
             {name: 'Rajma Chawal 1', cost: 100, ingredients: ['rajma beans', 'rice', 'onion', 'tomato']},
             {name: 'Rajma Chawal 2', cost: 100, ingredients: ['rajma beans', 'rice', 'onion', 'tomato']},
             {name: 'Rajma Chawal 3', cost: 100, ingredients: ['rajma beans', 'rice', 'onion', 'tomato']},
             {name: 'Rajma Chawal 4', cost: 100, ingredients: ['rajma beans', 'rice', 'onion', 'tomato']}
-        ]));
+        ]));*/
 
         console.log(localStorage);
 
         this.state = {
             dishes: [
-                {name: 'Rajma Chawal 1', cost: 100, ingredients: ['rajma beans', 'rice', 'onion', 'tomato']},
-                {name: 'Rajma Chawal 2', cost: 100, ingredients: ['rajma beans', 'rice', 'onion', 'tomato']},
-                {name: 'Rajma Chawal 3', cost: 100, ingredients: ['rajma beans', 'rice', 'onion', 'tomato']},
-                {name: 'Rajma Chawal 4', cost: 100, ingredients: ['rajma beans', 'rice', 'onion', 'tomato']}
+                ...JSON.parse(localStorage.getItem('dishes'))
             ]
         }
     }
@@ -37,6 +34,11 @@ class App extends Component {
                 ...this.state.dishes,
                 {name: name, cost: cost, ingredients: ingredients.split(/,+\s*/)}
             ]
+        }, () => {
+            localStorage.setItem(
+                'dishes',
+                JSON.stringify(this.state.dishes)
+            )
         });
     };
 

@@ -11,8 +11,8 @@ class Dishes extends Component{
         let {list_dishes} = this.props;
         // let str = list_dishes.map((element) => `<li>${element.name}</li>`);
         // console.log(str);
-        list_dishes[0].name = "CHANGE";
-        list_dishes[0].cost = 10001;
+        // list_dishes[0].name = "CHANGE";
+        // list_dishes[0].cost = 10001;
         
         return (
             <div>
