@@ -1,0 +1,6 @@
+This is file2.txt
+
+This is the updated line in master branch. Kindly check this out.
+This is an updated line in newBranch branch of the repo.
+
+

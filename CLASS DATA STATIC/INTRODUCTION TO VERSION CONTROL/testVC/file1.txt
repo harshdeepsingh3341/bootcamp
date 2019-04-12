@@ -1,0 +1,7 @@
+This is file1.txt
+
+new Changes in the cloned file from github.
+
+new new new changes in the newset commit in the cloned repo.
+
+new changes to test the stash and pop.
