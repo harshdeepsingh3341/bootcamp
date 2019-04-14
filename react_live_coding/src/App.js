@@ -200,7 +200,7 @@ const PrivateRoute = (({component: Component, isAuth, todos = {}, addNewToDoGrou
     <Route
         {...rest}
         render={(props) => (
-            (true) ? (
+            (isAuth) ? (
                 <Component
                     todos={todos}
                     addGroupCallback={addNewToDoGroup}
