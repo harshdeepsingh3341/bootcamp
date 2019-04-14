@@ -11,6 +11,7 @@ export default class HomeHeader extends Component {
 
     render() {
         const {isAuth} = this.context;
+        const {headerText} = this.props;
         return (
             <Header>
                 <div>
@@ -20,7 +21,7 @@ export default class HomeHeader extends Component {
                             to={'/'}
                             className={'link'}
                         >
-                            To Do
+                            {headerText}
                         </Link>
                     </H1>
                 </div>
@@ -42,8 +43,8 @@ export default class HomeHeader extends Component {
                         </Link>
                     </li>
                     <li>
-                        <Link to={'/todolist'} className={'link'}>
-                            To Do List
+                        <Link to={'/todos'} className={'link'}>
+                            To Dos
                         </Link>
                     </li>
                 </NavList>
