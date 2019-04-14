@@ -50,7 +50,7 @@ export default class Login extends Component {
         const {loginCallback, history} = this.props;
         const {username, password, auth} = this.state;
         if (username === auth.username && password === auth.password) {
-            history.push('/todolist');
+            history.push('/todos');
             loginCallback();
         } else {
             this.setState({

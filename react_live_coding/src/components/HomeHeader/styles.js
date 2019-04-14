@@ -39,6 +39,7 @@ padding-left: 20px;
 .link{
 text-decoration: none;
 color: inherit;
+text-transform: capitalize;
 `;
 
 const NavList = styled.ul`
