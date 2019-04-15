@@ -14,7 +14,7 @@ export default class App extends Component {
         super(props);
         this.state = {
             toDos: {
-                'Default something': {
+                '1': {
                     id: 1,
                     name: 'Default something',
                     toDoItems: [
@@ -48,11 +48,12 @@ export default class App extends Component {
     };
 
     addNewToDoGroup = (name) => {
+const id = Math.floor(Math.random() * 10000);
         this.setState({
             toDos: {
                 ...this.state.toDos,
-                [name]: {
-                    id: Math.floor(Math.random() * 10000),
+                [id]: {
+                    id: id,
                     name: name,
                     toDoItems: []
                 }
@@ -168,7 +169,7 @@ export default class App extends Component {
 
                         <PrivateRoute
                             exact
-                            path={'/todos/:name'}
+                            path={'/todos/:id'}
                             component={ToDoList}
                             isAuth={isAuth}
                             todos={toDos}

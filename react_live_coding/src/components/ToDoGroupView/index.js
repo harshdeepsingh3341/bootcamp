@@ -4,7 +4,7 @@ import {Styled_Link} from "./styles";
 export default ({name, id}) => (
     <React.Fragment>
         <Styled_Link
-            to={`/todos/${name}`}
+            to={`/todos/${id.toString()}`}
         >
                 {name}
         </Styled_Link>
