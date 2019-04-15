@@ -25,16 +25,16 @@ export default class ToDoList extends Component {
 
     render() {
         console.log(this.props);
-        const{match:{params:{name}}, addToDoCallback, toggleCheckCallback, saveEditsCallback, deleteToDoCallback} = this.props;
+        const{match:{params:{id}}, addToDoCallback, toggleCheckCallback, saveEditsCallback, deleteToDoCallback} = this.props;
         console.log(this.state);
         
-        const {toDos:{[name]:{toDoItems}}} = this.state;
+        const {toDos:{[id]:{toDoItems}}} = this.state;
         const myToDoItems = toDoItems.map((element) =>
             <ToDo
                 key={element.id}
                 {...element}
                 length={toDoItems.length}
-                name={name}
+                name={id}
                 toggleCheckCallback={toggleCheckCallback}
                 saveEditsCallback={saveEditsCallback}
                 deleteToDoCallback={deleteToDoCallback}
@@ -44,7 +44,7 @@ export default class ToDoList extends Component {
                 <AddItemContainer
                     addItemCallback={addToDoCallback}
                     placeholder={'Add To Do'}
-                    name={name}
+                    name={id}
                 />
                 {
                     myToDoItems
