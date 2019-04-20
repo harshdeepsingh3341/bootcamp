@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "firstName": "Leanne",
+      "lastName": "Graham"
+    },
+    "email": "Sincere@april.biz"
+  },
+  {
+    "id": 2,
+    "name": {
+      "firstName": "Ervin",
+      "lastName": "Howell"
+    },
+    "email": "Shanna@melissa.tv"
+  },
+  {
+    "id": 3,
+    "name": {
+      "firstName": "Clementine",
+      "lastName": " Bauch"
+    },
+    "email": "Nathan@yesenia.net"
+  },
+  {
+    "id": 4,
+    "name": {
+      "firstName": "Patricia",
+      "lastName": " Lebsack"
+    },
+    "email": "Julianne.OConner@kory.org"
+  },
+  {
+    "id": 5,
+    "name": {
+      "firstName": "Chelsey",
+      "lastName": "Dietrich"
+    },
+    "email": "Lucio_Hettinger@annie.ca"
+  }
+]
