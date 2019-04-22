@@ -1,12 +1,9 @@
 const express = require('express');
 let users = require('../data/users');
+const {addTimestamp} = require("../middlewares");
 
 const router = express.Router();
 
-const addTimestamp = (req, res, next) => {
-    req.body.created_at = new Date();
-    next();
-};
 
 router.get('/', (req, res) => {
     users.length === 0 ? (

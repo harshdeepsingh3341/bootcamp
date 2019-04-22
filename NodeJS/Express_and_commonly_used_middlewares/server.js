@@ -2,26 +2,14 @@ const express = require('express');
 const path = require('path');
 const router = require('./router/index');
 const bodyParser = require('body-parser');
+const {loggerMiddleWare} = require("./middlewares");
+const {allowCrossOriginMiddleware} = require("./middlewares");
+const {addDelayMiddleware} = require("./middlewares");
 
 const app = express();
 const __port = 8080;
 
-const loggerMiddleWare = (req, res, next) => {
-    console.log(`request received on ${req.url}, with method ${req.method}`);
-    next();
-};
-const allowCrossOriginMiddleware = (req, res, next) => {
-    console.log('cors');
 
-    res.header("Access-Control-Allow-Origin", "*");
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-    next();
-};
-
-const addDelayMiddleware = (req, res, next) => {
-    setTimeout(() => next(), 300)
-}
 
 // app.use('/', express.static(path.join(__dirname, 'static', 'react_app', 'build')));
 
