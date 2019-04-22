@@ -10,5 +10,5 @@ export const ADD_USER_STARTED = 'ADD_USER_STARTED';
 export const ADD_USER_SUCCESS = 'ADD_USER_SUCCESS';
 export const ADD_USER_FAILURE = 'ADD_USER_FAILURE';
 
-export const API_HOST_NAME = '';
+export const API_HOST_NAME = 'http://localhost:8080';
 

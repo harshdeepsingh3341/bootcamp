@@ -14,14 +14,16 @@ const allowCrossOriginMiddleware = (req, res, next) => {
     console.log('cors');
 
     res.header("Access-Control-Allow-Origin", "*");
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
     next();
 };
 
-const addDelayMiddleware = (req,res,next) => {
+const addDelayMiddleware = (req, res, next) => {
     setTimeout(() => next(), 300)
 }
 
-app.use('/', express.static(path.join(__dirname, 'static', 'react_app', 'build')));
+// app.use('/', express.static(path.join(__dirname, 'static', 'react_app', 'build')));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -31,7 +33,7 @@ app.use(bodyParser.urlencoded({
 app.use('/', addDelayMiddleware, allowCrossOriginMiddleware, loggerMiddleWare);
 app.use('/users', router);
 
-app.all("*",(req,res) => {
+app.all("*", (req, res) => {
     res.redirect('/')
 });
 
