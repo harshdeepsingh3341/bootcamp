@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <!--<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <script type="text/javascript"
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>-->
+</head>
+<body>
+<div class="container col-md-4">
+    <div class="container-fluid">
+        <!--Assignment 1 Create SignUp form And Handle Express routes-->
+        <form action="/login" method="post">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" placeholder="Enter username" name="username"/>
+            </div>
+            <div class="form-group">
+                <label for="username">Password</label>
+                <input type="password" class="form-control" placeholder="Enter password" name="password"/>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Login</button>
+                <a href="/facebookLogin" class="btn btn-primary">Facebook Login</a>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+
