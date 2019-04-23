@@ -4,13 +4,15 @@
     "password": "ttn",
     "isAuth": false,
     "authToken": "",
-    "id": 1
+    "id": 1,
+    "name": "Harshdeep Singh"
   },
   {
     "username": "ttn1",
     "password": "ttn1",
     "isAuth": false,
     "authToken": "",
-    "id": 2
+    "id": 2,
+    "name": "John Doe"
   }
 ]
