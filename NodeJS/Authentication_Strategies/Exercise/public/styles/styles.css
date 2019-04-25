@@ -1,0 +1,56 @@
+header {
+    border-bottom: thin solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul {
+    list-style: none;
+    flex-basis: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+header ul li {
+    font-size: 17px;
+}
+
+header ul li a {
+}
+
+header h1 {
+    font-size: 25px;
+}
+
+.form-container {
+    width: 37%;
+    margin: auto;
+}
+
+.form-container form {
+    width: 100%;
+
+}
+
+.form-container input {
+    line-height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    border: thin solid #ccc;
+    border-radius: 6px;
+    margin: 8px auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.form-container input[type="submit"] {
+    cursor: pointer;
+    background-color: dodgerblue;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
