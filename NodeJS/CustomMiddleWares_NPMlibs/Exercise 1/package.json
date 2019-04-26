@@ -1,0 +1,17 @@
+{
+  "name": "custommiddlewares_npmlibs",
+  "version": "1.0.0",
+  "description": "Custom middlewares in express and NPM new libs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Harshdeep Singh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4"
+  }
+}
