@@ -12,7 +12,7 @@ exports.allowCrossOriginMiddleware = (req, res, next) => {
 };
 
 exports.addDelayMiddleware = (req, res, next) => {
-    setTimeout(() => next(), 300)
+    setTimeout(() => next(), 840)
 };
 
 exports.pageErrorMiddleware = (req, res, next) => {
