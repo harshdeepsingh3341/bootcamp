@@ -71,7 +71,10 @@ exports.addTodoGroup = (data) => {
                 resolve({
                     status: 200,
                     message: 'success',
-                    data: todoGroup
+                    data: {
+                        todoGroup_id: todoGroup.todoGroup_id,
+                        name: todoGroup.name
+                    }
                 })
             }
         });
@@ -84,7 +87,8 @@ exports.getTodosFromGroup = ({todoGroupId}) => {
                 todoGroup_id: todoGroupId
             },
             {
-                _id: 0
+                _id: 0,
+                'todoItems._id': 0
             },
             (err, todoGroup) => {
                 if (err) {
@@ -93,7 +97,7 @@ exports.getTodosFromGroup = ({todoGroupId}) => {
                     resolve({
                         status: 200,
                         message: "success",
-                        data: todoGroup
+                        data: todoGroup.todoItems
                     })
                 }
             }
@@ -112,7 +116,10 @@ exports.addNewTodoToGroup = (data) => {
                 }
             },
             {
-                new: true
+                new: true,
+                fields: {
+                    'todoItems._id': 0
+                }
             },
             (err, todoGroup) => {
                 if (err) {
@@ -121,7 +128,7 @@ exports.addNewTodoToGroup = (data) => {
                     resolve({
                         status: 200,
                         message: 'success',
-                        data: todoGroup
+                        data: todoGroup.todoItems
                     })
                 }
             }
@@ -143,7 +150,10 @@ exports.toggleTodoCheck = (data) => {
             },
             {
                 new: true,
-                useFindAndModify: false
+                useFindAndModify: false,
+                fields: {
+                    'todoItems._id': 0
+                }
             },
             (err, todoGroup) => {
                 if (err) {
@@ -152,7 +162,7 @@ exports.toggleTodoCheck = (data) => {
                     resolve({
                         status: 200,
                         message: 'success',
-                        data: todoGroup
+                        data: todoGroup.todoItems
                     })
                 }
             }
@@ -172,7 +182,10 @@ exports.editTodoInGroup = (data) => {
             },
             {
                 new: true,
-                useFindAndModify: false
+                useFindAndModify: false,
+                fields: {
+                    'todoItems._id': 0
+                }
             },
             (err, todoGroup) => {
                 if (err) {
@@ -181,7 +194,7 @@ exports.editTodoInGroup = (data) => {
                     resolve({
                         status: 200,
                         message: "success",
-                        data: todoGroup
+                        data: todoGroup.todoItems
                     })
                 }
             }
