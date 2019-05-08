@@ -14,5 +14,6 @@ export const Styled_ErrorMessage = styled.h2`
 
 export const Styled_ErrorStack = styled.p`
 display: block;
-white-space: pre;
+white-space: pre-line;
+line-height: 50px;
 `;

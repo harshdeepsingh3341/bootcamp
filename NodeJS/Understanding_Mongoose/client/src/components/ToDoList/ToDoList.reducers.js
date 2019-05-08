@@ -7,7 +7,8 @@ import {
     DELETE_TODO_STARTED,
     DELETE_TODO_SUCCESS,
     EDIT_TODO_FAILURE,
-    EDIT_TODO_STARTED, EDIT_TODO_SUCCESS,
+    EDIT_TODO_STARTED,
+    EDIT_TODO_SUCCESS,
     GET_ALL_TODOS_FAILURE,
     GET_ALL_TODOS_STARTED,
     GET_ALL_TODOS_SUCCESS,
@@ -17,6 +18,7 @@ import {
 } from "../../constants";
 
 export default (state = initialState, action) => {
+    console.log('action', action);
     switch (action.type) {
         case EDIT_TODO_FAILURE:
         case DELETE_TODO_FAILURE:
@@ -36,7 +38,7 @@ export default (state = initialState, action) => {
                     ...state.errors,
                     ToDoListError: {
                         isError: true,
-                        error: action.data
+                        error: action.data.response.data
                     }
                 },
                 success: {
