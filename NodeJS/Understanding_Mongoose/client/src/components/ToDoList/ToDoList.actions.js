@@ -44,6 +44,8 @@ export const getAllTodos = (todoGroupId) => (dispatch) => {
         url: `${HOST_NAME}/todo/${todoGroupId}/todos`
     })
         .then(response => {
+            console.log('getAllTodos', response);
+            
             dispatch(getAllTodosSuccess(response.data))
         })
         .catch(err => {

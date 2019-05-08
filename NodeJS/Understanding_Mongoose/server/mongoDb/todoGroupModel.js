@@ -91,8 +91,15 @@ exports.getTodosFromGroup = ({todoGroupId}) => {
                 'todoItems._id': 0
             },
             (err, todoGroup) => {
+
                 if (err) {
                     reject(err);
+                } else if (!todoGroup) {
+                    try {
+                        throw new Error('Todo Group ID is invalid')
+                    } catch (e) {
+                        reject(e);
+                    }
                 } else {
                     resolve({
                         status: 200,
@@ -124,6 +131,12 @@ exports.addNewTodoToGroup = (data) => {
             (err, todoGroup) => {
                 if (err) {
                     reject(err);
+                } else if (!todoGroup) {
+                    try {
+                        throw new Error('Todo Group ID is invalid')
+                    } catch (e) {
+                        reject(e);
+                    }
                 } else {
                     resolve({
                         status: 200,
@@ -158,6 +171,12 @@ exports.toggleTodoCheck = (data) => {
             (err, todoGroup) => {
                 if (err) {
                     reject(err);
+                } else if (!todoGroup) {
+                    try {
+                        throw new Error('Todo Group ID/Todo ID is invalid')
+                    } catch (e) {
+                        reject(e);
+                    }
                 } else {
                     resolve({
                         status: 200,
@@ -190,7 +209,13 @@ exports.editTodoInGroup = (data) => {
             (err, todoGroup) => {
                 if (err) {
                     reject(err);
-                } else {
+                } else if (!todoGroup) {
+                    try {
+                        throw new Error('Todo Group ID/Todo ID is invalid')
+                    } catch (e) {
+                        reject(e);
+                    }
+                }  else {
                     resolve({
                         status: 200,
                         message: "success",
@@ -218,7 +243,13 @@ exports.deleteTodoInGroup = (data) => {
             (err, done) => {
                 if (err) {
                     reject(err);
-                } else {
+                } else if (!todoGroup) {
+                    try {
+                        throw new Error('Todo Group ID/Todo ID is invalid')
+                    } catch (e) {
+                        reject(e);
+                    }
+                }  else {
                     resolve({
                         status: 200,
                         message: "success",

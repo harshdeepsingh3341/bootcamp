@@ -23,6 +23,17 @@ export default () => (
                 path={'/todos'}
                 component={ToDoGroups}
             />
+
+            <Route
+                exact
+                render={
+                    () => (
+                        <div>
+                            <h3> 404 page not found </h3>
+                        </div>
+                    )
+                }
+            />
         </Switch>
     </React.Fragment>
 );

@@ -16,12 +16,16 @@ exports.addDelayMiddleware = (req, res, next) => {
 };
 
 exports.pageErrorMiddleware = (req, res, next) => {
-    req.status = 404;
+    req.status(404);
     next(new Error("404 Page not found"))
 };
 
 exports.defaultErrorHandler = (err, req, res, next) => {
-    res.json({
+    console.log("err2", err.message);
+    
+    !res.get('status') && res.status(500);
+    res.message = err.message;
+    res.send({
         status: req.status,
         message: err.message,
         stack: err.stack
