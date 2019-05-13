@@ -105,6 +105,9 @@ describe('/PUT/todo/:todoGroupId/:todoId/toggleCheck/:check', () => {
                 res.body.should.have.property('status');
                 res.body.should.have.property('data');
                 res.body.data.should.be.a('array');
+
+                res.body.data.find(element => element.todo_id === todoId).isChecked.should.be.equal(true);
+
                 done();
             })
     });
@@ -116,6 +119,9 @@ describe('/PUT/todo/:todoGroupId/:todoId/toggleCheck/:check', () => {
                 res.body.should.have.property('status');
                 res.body.should.have.property('data');
                 res.body.data.should.be.a('array');
+
+                res.body.data.find(element => element.todo_id === todoId).isChecked.should.be.equal(false);
+
                 done();
             })
     });
@@ -136,6 +142,9 @@ describe('/PUT/todo/:todoGroupId/:todoId/editTodo', () => {
                 res.body.should.have.property('status');
                 res.body.should.have.property('data');
                 res.body.data.should.be.a('array');
+
+                res.body.data.find(element => element.todo_id === todoId).todo.should.be.equal(todo.todo);
+
                 done();
             })
     });
