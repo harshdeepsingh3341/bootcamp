@@ -4,10 +4,11 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {faCircleNotch} from '@fortawesome/free-solid-svg-icons'
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 
 library.add(faCircleNotch);
 
-export default class LoaderComponent extends Component {
+class LoaderComponent extends Component {
 
     render() {
         const {
@@ -37,3 +38,11 @@ export default class LoaderComponent extends Component {
 LoaderComponent.propTypes = {
     message: PropTypes.string.isRequired
 };
+
+const mapStateToProps = state => state.loader;
+
+const mapDispatchToProps = {
+
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(LoaderComponent)
