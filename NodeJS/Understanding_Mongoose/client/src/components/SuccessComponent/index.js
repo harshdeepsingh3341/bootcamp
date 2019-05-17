@@ -41,3 +41,7 @@ SuccessComponent.propTypes = {
     message: PropTypes.string.isRequired,
     displayTime: PropTypes.number.isRequired
 };
+
+SuccessComponent.defaultProps = {
+    displayTime: 4
+};

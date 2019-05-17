@@ -126,7 +126,8 @@ exports.addNewTodoToGroup = (data) => {
                 new: true,
                 fields: {
                     'todoItems._id': 0
-                }
+                },
+                useFindAndModify: false
             },
             (err, todoGroup) => {
                 if (err) {
@@ -138,10 +139,12 @@ exports.addNewTodoToGroup = (data) => {
                         reject(e);
                     }
                 } else {
+                    const newTodo = todoGroup.todoItems.find(element => element.todo_id.toString() === data.todo_id.toString());
+
                     resolve({
                         status: 200,
                         message: 'success',
-                        data: todoGroup.todoItems
+                        data: newTodo
                     })
                 }
             }
@@ -178,10 +181,11 @@ exports.toggleTodoCheck = (data) => {
                         reject(e);
                     }
                 } else {
+                    const updatedTodo = todoGroup.todoItems.find(element => element.todo_id.toString() === data.todoId.toString());
                     resolve({
                         status: 200,
                         message: 'success',
-                        data: todoGroup.todoItems
+                        data: updatedTodo
                     })
                 }
             }
@@ -215,11 +219,13 @@ exports.editTodoInGroup = (data) => {
                     } catch (e) {
                         reject(e);
                     }
-                }  else {
+                } else {
+                    const updatedTodo = todoGroup.todoItems.find(element => element.todo_id.toString() === data.todoId.toString());
+
                     resolve({
                         status: 200,
                         message: "success",
-                        data: todoGroup.todoItems
+                        data: updatedTodo
                     })
                 }
             }
@@ -241,15 +247,16 @@ exports.deleteTodoInGroup = (data) => {
                 }
             },
             (err, done) => {
+
                 if (err) {
                     reject(err);
-                } else if (!todoGroup) {
+                } else if (done.nModified === 0) {
                     try {
                         throw new Error('Todo Group ID/Todo ID is invalid')
                     } catch (e) {
                         reject(e);
                     }
-                }  else {
+                } else {
                     resolve({
                         status: 200,
                         message: "success",

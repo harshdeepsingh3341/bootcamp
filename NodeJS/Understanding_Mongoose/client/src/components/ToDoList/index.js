@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
 import {Styled_ListContainer} from "./styles";
 import AddItemInputComponent from "../AddItemInputComponent";
-// import ToDo from '../ToDo';
 import {connect} from 'react-redux';
 import {addNewTodo, deleteTodo, editTodo, getAllTodos, toggleCheckTodo} from './ToDoList.actions'
-import LoaderComponent from "../LoaderComponent";
 import ErrorComponent from "../ErrorComponent";
 import SuccessComponent from "../SuccessComponent";
 import ToDoComponent from "../ToDoComponent";
+import LoaderComponent from "../LoaderComponent";
 
 
 class ToDoList extends Component {
@@ -20,28 +19,16 @@ class ToDoList extends Component {
                     id: todoGroupId
                 }
             },
-            loaders: {
-                ToDoListLoader: {
-                    loader,
-                    message: loaderMessage
-                }
-            },
-            errors: {
-                ToDoListError: {
-                    isError,
-                    error
-                }
-            },
-            success: {
-                ToDoListSuccess: {
-                    success,
-                    message: successMessage
-                }
-            },
+            loader,
+            message: loaderMessage,
+            isError,
+            error,
+            success,
+            message: successMessage,
             todoList
         } = this.props;
 
-        const loaderView = (loader) ? (
+        const loaderView = loader ? (
             <LoaderComponent
                 message={loaderMessage}
             />
@@ -60,7 +47,6 @@ class ToDoList extends Component {
         const successView = success ? (
             <SuccessComponent
                 message={successMessage}
-                displayTime={3}
             />
         ) : (
             null
@@ -138,7 +124,14 @@ class ToDoList extends Component {
 
 }
 
-const mapStateToProps = state => state.todos;
+const mapStateToProps = state => (
+    {
+        ...state.todos,
+        ...state.success,
+        ...state.error,
+        ...state.loader
+    }
+);
 
 const mapDispatchToProps = dispatch => (
     {

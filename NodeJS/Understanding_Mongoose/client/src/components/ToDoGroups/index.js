@@ -14,28 +14,15 @@ class ToDoGroups extends Component {
         console.log(this.props);
         const todos = {};
 
-        const
-            {
-                loaders: {
-                    ToDoGroupsLoader: {
-                        loader,
-                        message: loaderMessage
-                    }
-                },
-                errors: {
-                    ToDoGroupsError: {
-                        isError,
-                        error
-                    }
-                },
-                success: {
-                    ToDoGroupsSuccess: {
-                        success,
-                        message: successMessage
-                    }
-                },
-                todoGroups
-            } = this.props;
+        const {
+            loader,
+            message: loaderMessage,
+            isError,
+            error,
+            success,
+            message: successMessage,
+            todoGroups
+        } = this.props;
 
         const loaderView = loader ? (
             <LoaderComponent
@@ -56,7 +43,6 @@ class ToDoGroups extends Component {
         const successView = (success) ? (
             <SuccessComponent
                 message={successMessage}
-                displayTime={4}
             />
         ) : (
             null
@@ -114,7 +100,14 @@ class ToDoGroups extends Component {
     }
 }
 
-const mapStateToProps = state => state.todoGroups;
+const mapStateToProps = state => (
+    {
+        ...state.todoGroups,
+        ...state.loader,
+        ...state.success,
+        ...state.error
+    }
+);
 
 const mapDispatchToProps = {
     getTodoGroups,

@@ -49,6 +49,8 @@ export const getAllTodos = (todoGroupId) => (dispatch) => {
             dispatch(getAllTodosSuccess(response.data))
         })
         .catch(err => {
+            console.log('err', err);
+            
             dispatch(getAllTodosFailed(err));
         })
 
