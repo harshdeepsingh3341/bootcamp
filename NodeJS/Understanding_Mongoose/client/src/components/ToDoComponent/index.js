@@ -53,7 +53,6 @@ export default class ToDoComponent extends Component {
     render() {
 
         const {isSave, editedToDo} = this.state;
-        console.log(this.props);
 
         const {length, todo, todo_id, isChecked, deleteTodoCallback} = this.props;
 

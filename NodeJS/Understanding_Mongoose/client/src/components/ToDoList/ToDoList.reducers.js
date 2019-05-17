@@ -159,7 +159,10 @@ export default (state = initialState, action) => {
                     }
                 },
                 todoList: [
-                    ...action.data
+                    ...state.todoList,
+                    {
+                        ...action.data
+                    }
                 ]
             }
         }
@@ -192,6 +195,12 @@ export default (state = initialState, action) => {
         }
 
         case TOGGLE_CHECK_SUCCESS: {
+            const todoList = state.todoList.map(element => {
+                if(element.todo_id === action.data.todo_id){
+                    return action.data;
+                }
+                return element;
+            });
             return {
                 ...state,
                 loaders: {
@@ -215,7 +224,9 @@ export default (state = initialState, action) => {
                         message: 'To Do Checked/Unchecked'
                     }
                 },
-                todoList: [...action.data]
+                todoList: [
+                    ...todoList
+                ]
             }
         }
 
@@ -306,6 +317,13 @@ export default (state = initialState, action) => {
         }
 
         case EDIT_TODO_SUCCESS: {
+            const todoList = state.todoList.map(element => {
+                if(element.todo_id === action.data.todo_id){
+                    return action.data;
+                }
+                return element;
+            });
+
             return {
                 ...state,
                 loaders: {
@@ -330,7 +348,7 @@ export default (state = initialState, action) => {
                     }
                 },
                 todoList: [
-                    ...action.data
+                    ...todoList
                 ]
             }
         }
