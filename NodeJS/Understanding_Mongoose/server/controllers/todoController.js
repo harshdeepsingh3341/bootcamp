@@ -31,7 +31,7 @@ router.post('/:todoGroupId/todo', (req, res, next) => {
         })
 });
 
-router.put('/:todoGroupId/:todoId/toggleCheck/:checked', (req, res, next) => {
+router.patch('/:todoGroupId/:todoId/toggleCheck/:checked', (req, res, next) => {
     toggleCheck(req.params)
         .then(response => {
             res.send(response);
@@ -41,7 +41,7 @@ router.put('/:todoGroupId/:todoId/toggleCheck/:checked', (req, res, next) => {
         })
 });
 
-router.put('/:todoGroupId/:todoId/editTodo', (req, res, next) => {
+router.patch('/:todoGroupId/:todoId/editTodo', (req, res, next) => {
     editTodo({
         ...req.params,
         ...req.body
