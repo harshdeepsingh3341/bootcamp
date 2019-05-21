@@ -16,11 +16,11 @@ class ToDoGroups extends Component {
 
         const {
             loader,
-            message: loaderMessage,
+            loaderMessage,
             isError,
             error,
             success,
-            message: successMessage,
+            successMessage,
             todoGroups
         } = this.props;
 

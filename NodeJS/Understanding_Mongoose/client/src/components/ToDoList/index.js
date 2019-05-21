@@ -20,11 +20,11 @@ class ToDoList extends Component {
                 }
             },
             loader,
-            message: loaderMessage,
+            loaderMessage,
             isError,
             error,
             success,
-            message: successMessage,
+            successMessage,
             todoList
         } = this.props;
 

@@ -118,7 +118,7 @@ export const toggleCheckTodo = (todoGroupId, todoId, currentCheck) => dispatch =
     dispatch(toggleCheckTodoStarted());
     axios(
         {
-            method: 'PUT',
+            method: 'PATCH',
             url: `${HOST_NAME}/todo/${todoGroupId}/${todoId}/toggleCheck/${!currentCheck}`
         }
     )
@@ -192,7 +192,7 @@ export const editTodo = (todoGroupId, todoId, editedTodo) => (dispatch) => {
     dispatch(editTodoStarted());
 
     axios({
-        method: 'PUT',
+        method: 'PATCH',
         url: `${HOST_NAME}/todo/${todoGroupId}/${todoId}/editTodo`,
         headers: {'content-type': 'application/x-www-form-urlencoded'},
         data: querystring.stringify({todo: editedTodo})

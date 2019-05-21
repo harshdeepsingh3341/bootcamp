@@ -14,7 +14,7 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 loader: true,
-                message: 'Loading To Dos'
+                loaderMessage: 'Loading To Dos'
             }
         }
 
@@ -22,7 +22,7 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 loader: true,
-                message: 'Loading Todo Groups'
+                loaderMessage: 'Loading Todo Groups'
             }
         }
 
@@ -30,7 +30,7 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 loader: true,
-                message: 'Adding new Todo Group'
+                loaderMessage: 'Adding new Todo Group'
             }
         }
 
@@ -38,7 +38,7 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 loader: true,
-                message: `Deleting Todo Group ${action.data}`
+                loaderMessage: `Deleting Todo Group ${action.data}`
             }
         }
 
@@ -46,7 +46,7 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 loader: false,
-                message: ''
+                loaderMessage: ''
             }
         }
     }

@@ -15,7 +15,7 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 success: true,
-                message: 'New Group Added'
+                successMessage: 'New Group Added'
             }
         }
 
@@ -23,7 +23,7 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 success: true,
-                message: 'Todo Group Deleted'
+                successMessage: 'Todo Group Deleted'
             }
         }
 
@@ -31,7 +31,7 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 success: true,
-                message: 'New To Do added'
+                successMessage: 'New To Do added'
             }
         }
 
@@ -39,7 +39,7 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 success: true,
-                message: 'To Do Checked/Unchecked'
+                successMessage: 'To Do Checked/Unchecked'
             }
         }
 
@@ -47,7 +47,7 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 success: true,
-                message: 'To Do Deleted'
+                successMessage: 'To Do Deleted'
             }
         }
 
@@ -55,7 +55,7 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 success: true,
-                message: 'To Do edited'
+                successMessage: 'To Do edited'
             }
         }
 
@@ -63,7 +63,7 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 success: false,
-                message: ''
+                successMessage: ''
             }
         }
     }
